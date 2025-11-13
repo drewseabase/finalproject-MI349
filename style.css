@@ -1,11 +1,13 @@
 body{
     background-color: #18453B;
+    font-family: Helvetica, sans-serif;
     margin: 0;
 }
 header{
     display: flex;
     align-items: flex-start;
-    justify-content: center;  
+    justify-content: center; 
+     
 }
 
 .background-img{position: relative;}
@@ -24,13 +26,12 @@ header{
 
 .background-img nav ul{
  display: flex;
- justify-content: center;
+ justify-content: space-evenly;
  width: 95vw;
  gap: 1.5rem;
  list-style: none;
  padding: 20px;
  margin: 0;
-
 }
 nav li{
     text-decoration: none;
@@ -55,11 +56,9 @@ nav li:hover{
     height: 100vh;
     flex-direction: column;
     padding: 0 clamp(1.5rem,5vw,4rem);
-    border: 1px solid black;
     z-index: 1;
 }
 .inner img{z-index: 1; border-radius: 25px; margin-right: 30px; margin-top: 230px; width: 600px; height: auto;}
-
 
 .hero-text{
    position: relative;
@@ -69,7 +68,6 @@ nav li:hover{
    text-align: center;
    transform: translateY(30vh);
 }
-
 .hero-text h1{
     margin: 0 0 0.5rem;
     font-size: clamp(1.5rem, 3vw, 2.5rem);
