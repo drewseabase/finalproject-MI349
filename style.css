@@ -68,7 +68,7 @@ nav a:hover{
    margin-left: auto;
    width: min(40rem, 80vw);
    text-align: center;
-   transform: translateY(30vh);
+   transform: translateY(200%);
 }
 .hero-text h1{
     margin: 0 0 0.5rem;
@@ -79,6 +79,7 @@ nav a:hover{
     text-transform: uppercase;
     text-shadow: 0 10px 30px rgba(0,0,0,0.6);
 }
+
 
 
 
