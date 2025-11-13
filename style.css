@@ -1,0 +1,76 @@
+body{
+    background-color: #18453B;
+    margin: 0;
+}
+header{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;  
+}
+
+.background-img{position: relative;}
+.background-img::before{
+    content: "";
+    position: absolute;
+    min-height: 80vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url(Images/IMG_6893.jpg);
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.25;
+}
+.background-img nav{position: relative; z-index: 1;}
+
+.background-img nav ul{
+ display: flex;
+ justify-content: center;
+ width: 95vw;
+ gap: 1.5rem;
+ list-style: none;
+ padding: 20px;
+ margin: 0;
+
+}
+nav li{
+    text-decoration: none;
+    color: #fafafa;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 16px;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+nav li:hover{
+    text-decoration: underline;
+    position: relative;
+    background-color: rgba(0,0,0,0.25);
+}
+.inner{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 0 clamp(1.5rem,5vw,4rem);
+}
+.hero-text{
+   position: relative;
+   z-index: 1;
+   margin-left: auto;
+   width: min(40rem, 80vw);
+   text-align: center;
+   transform: translateY(30vh);
+}
+
+.hero-text h1{
+    margin: 0 0 0.5rem;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    color: #fafafa;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+
