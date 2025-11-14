@@ -63,7 +63,7 @@ main{padding: 15rem 0;}
     column-gap: clamp(1rem, 1vw, 3rem);
     row-gap: 10px;
 
-    max-width: 1100px;
+    max-width: 1500px;
     margin: 0 auto;
     min-height: 70vh;
     padding: 0 clamp(1.5rem, 5vw, 4rem);
@@ -72,14 +72,20 @@ main{padding: 15rem 0;}
 
 .hero-left {
     grid-area: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 25rem;
+    border: 1px solid black;
     color: #fafafa;
     font-size: 1rem;
     line-height: 1.6;
     margin-top: 400px;
+    margin-left: 150px;
 }
 
 .hero-text{
-   grid-area: title;
+   grid-area: "title";
    position: relative;
    z-index: 1;
    text-align: center;
@@ -96,7 +102,7 @@ main{padding: 15rem 0;}
 }
 
 .inner img{
-    grid-area: img;
+    grid-area: "img";
     z-index: 1;
     border-radius: 25px;
     width: clamp(400px, 40vw, 600px);
@@ -113,26 +119,24 @@ main{padding: 15rem 0;}
           "title"
           "img"
           "left";
-        row-gap: 3rem;
+        row-gap: 2rem;
         justify-items: center;
         min-height: auto;
         padding-top: 1rem;
-        padding-bottom: 1rem;
+        height: 60vh;
     }
-
     .hero-text{
         text-align: center;
         width: min(90vw, 32rem);
     }
-
     .inner img{
         margin-top: 0;
         width: min(90vw, 400px);
     }
-
     .hero-left{
         text-align: center;
         width: min(90vw, 32rem);
+        margin-top: 0;
     }
 }
 
