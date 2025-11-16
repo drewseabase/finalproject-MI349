@@ -67,7 +67,7 @@ main{
     grid-template-areas:
       "left title"
       ". img"
-      "bottom bottom";
+      "mid-lft mid-rt";
     column-gap: clamp(1rem, 1vw, 3rem);
     row-gap: 10px;
 
@@ -95,14 +95,53 @@ main{
     margin-left: clamp(2rem, 7vw, 5rem);
     transform: translateY(9.5rem);
 }
+.mid-right{grid-area: mid-rt;}
+.mid-right p{ 
+    
+    font-size: 1.5rem; 
+    text-align: center; 
+    color: #fafafa;
+    border-radius: 12px;
+    width: min(30rem, 80vw);
+    background: #757474;
+    transform: translateY(-12rem);
+    margin-left: 10px;
+    padding: 10px;
+    box-shadow: rgba(44, 187, 99, .2)0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px, rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+}
+.mid-right button{ 
+    font-size: 1.05rem;
+    background-color: #757474;
+    border-radius: 100px;
+    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+    color: floralwhite;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px 28px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 400ms;
+    border: 0;
+    margin-left: 160px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+.mid-right button:hover{ 
+    box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+    transform: scale(1.05) rotate(-1deg);
+    margin-left: 160px;
 
-.bottom img{
-    grid-area: bottom;
-    width: min(700px, 60vw);
+}
+.mid-top img{
+    grid-area: mid-lft;
+    width: min(550px, 60vw);
     max-width: 100%;
     height: auto;
     display: block;
-    transform: translateY(25rem);
+    transform: translateY(20rem);
+    margin-left: 150px;
 }
 
 .hero-text{
@@ -146,7 +185,7 @@ main{
           "title"
           "img"
           "left"
-          "bottom";
+          "mid-rt";
         row-gap: 2rem;
         justify-items: center;
         min-height: auto;
@@ -168,7 +207,7 @@ main{
         margin-top: -7rem;
         margin-right: 50px;
     }
-    .bottom{
+    .mid-top{
         margin-top: -25rem;
         transform: translateX(-6rem);
     }
