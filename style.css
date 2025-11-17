@@ -194,7 +194,7 @@ p{margin: .4rem 0 0 0; color: #d7e7e0; max-width: 65ch;}
     filter: drop-shadow(0 0 0 white) drop-shadow(0 0 10px white);
 }
 .card_img img{
-    width: min(350px, 60vw);
+    width: min(500px, 60vw);
     max-width: 100%;
     height: auto;
     display: block;
@@ -202,7 +202,7 @@ p{margin: .4rem 0 0 0; color: #d7e7e0; max-width: 65ch;}
     border-radius: 25px;
     margin-top: -550px;
 }
-.card_img img:hover{transform: scale(1.05);}
+.card_img img:hover{transform: scale(1.02);}
 
 .hero-text{
    grid-area: title;
