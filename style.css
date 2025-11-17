@@ -194,7 +194,7 @@ p{margin: .4rem 0 0 0; color: #d7e7e0; max-width: 65ch;}
     filter: drop-shadow(0 0 0 white) drop-shadow(0 0 10px white);
 }
 .card_img img{
-    width: min(500px, 60vw);
+    width: min(450px, 60vw);
     max-width: 100%;
     height: auto;
     display: block;
