@@ -78,7 +78,6 @@ main{
     z-index: 1;
 }
 
-
 .hero-left {
     grid-area: left;
     display: flex;
@@ -109,48 +108,50 @@ main{
     padding: 10px;
     box-shadow: rgba(44, 187, 99, .2)0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px, rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
 }
-.mid-right button{ 
-    font-size: 1.05rem;
+button{ 
     background-color: #757474;
     border-radius: 100px;
     box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
-    color: floralwhite;
     cursor: pointer;
     display: inline-block;
-    font-family: 'Courier New', Courier, monospace;
     padding: 10px 28px;
     text-align: center;
     text-decoration: none;
     transition: all 400ms;
     border: 0;
     margin-left: 160px;
+    transform: translateY(-11rem);
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
 }
-.mid-right button:hover{ 
+button a{text-decoration: none; color: floralwhite; font-size: 1.05rem; font-family: 'Courier New', Courier, monospace;}
+button:hover{ 
     box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
-    transform: scale(1.05) rotate(-1deg);
+    transform: scale(1.05) rotate(-2deg) translateY(-11rem);
     margin-left: 160px;
 
 }
 .mid-top img{
     grid-area: mid-lft;
-    width: min(550px, 60vw);
+    width: min(500px, 60vw);
     max-width: 100%;
     height: auto;
     display: block;
     transform: translateY(20rem);
     margin-left: 150px;
+    filter: drop-shadow(0 0 0 white) drop-shadow(0 0 5px white);
+    transition: all 400ms;
+    padding-bottom: 20px;
+    
 }
-
+.mid-top img:hover{transform: scale(1.05) translateY(20rem); filter: drop-shadow(0 0 0 white) drop-shadow(0 0 10px white);}
 .hero-text{
    grid-area: title;
    position: relative;
    z-index: 1;
    text-align: center;
 }
-
 .hero-text h1{
     margin: 0 0 0.1rem;
     font-size: clamp(1.8rem, 4vw, 3rem);
@@ -160,13 +161,10 @@ main{
     text-transform: uppercase;
     text-shadow: 0 10px 30px rgba(0,0,0,0.6);
 }
-
-
 .container .right{
     grid-area: img;
     justify-self: center;
 }
-
 .container .right img{
     display: block;
     z-index: 1;
