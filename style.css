@@ -5,8 +5,7 @@ body{
     font-family: 'Oswald', sans-serif;
     margin:0;
 }
-
-main{padding: 18rem 0;}
+main{padding: 18rem 0 0 0;}
 .container{
     display: grid;
     grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
@@ -180,8 +179,30 @@ button:hover{
     .hero-left{
         text-align: center;
         width: min(90vw, 32rem);
-        margin-top: -7rem;
-        margin-right: 50px;
+        margin-top: -9rem;
+    }
+    .band{min-height: auto; padding: 20px 16px; margin-top: 145px;}
+    .brand--roster{background: #18453B;}
+    .panel_body{ height: 250px; font-size: .85rem;}
+    .panel_body img{ 
+        width: min(250px, 60vw);
+        max-width: 100%;
+        height: auto;
+        margin-top: -150px;
+    }
+    .panel_body img:hover{transform: scale(1.02); filter: drop-shadow(0 0 0 white) drop-shadow(0 0 8px white);}
+    h2{font-size: 1rem;}
+    .eyebrow{
+        font-size: .75rem;
+        box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset, rgba(44, 187, 99, .15) 0 1px 2px, rgba(44, 187, 99, .15) 0 2px 4px, rgba(44, 187, 99, .15)0 4px 8px, rgba(44, 187, 99, .15) 0px 8px 16px;
+    }
+    button{
+        font-weight: 400;
+        padding: 3px 11px;
+        margin-top: 10px;
+        margin-right: 20px;
+        box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset, rgba(44, 187, 99, .15) 0 1px 2px, rgba(44, 187, 99, .15) 0 2px 4px, rgba(44, 187, 99, .15)0 4px 8px, rgba(44, 187, 99, .15) 0px 8px 16px;
+  
     }
 }
 
