@@ -1,29 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&display=swap');
 
 body{
-    background-color: #18453B;
+    background-color:#18453B;
     font-family: 'Oswald', sans-serif;
-    margin: 0;
+    margin:0;
 }
 header{
     display: flex;
     align-items: flex-start;
-    justify-content: center; 
+    justify-content: center;
 }
-.background-img{position: relative;}
-.background-img::before{
-    content: "";
-    position: absolute; 
-    min-height: 80vh;
-    background-size: cover;
-    background-position: center;
-    background-image: url(Images/IMG_6893.jpg);
-    inset: 0;
-    pointer-events: none;
-    opacity: 0.25;
-}
-.background-img nav{position: relative; z-index: 1;}
-.background-img nav ul{
+nav{position: relative; z-index: 1;}
+nav ul{
     display: flex;
     justify-content: space-evenly;
     width: 95vw;
@@ -43,22 +31,32 @@ nav a{
     transition: background-color 0.15s ease, color 0.15s ease;
 }
 nav a:hover{
-    text-decoration: underline;
-    position: relative;
-    background-color: rgba(0,0,0,0.25);
-    padding: 5px;
-    border-radius: 16px;
+   text-decoration: underline;
+   background-color: rgba(0, 0, 0, 0.25);
+   position:relative;
+   padding: 5px;
+   border-radius: 16px;
 }
-main{
-    padding: 18rem 0;
+.background-img{position: relative;}
+.background-img::before{
+    content:"";
+    position: absolute;
+    min-height: 80vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url(Images/IMG_6893.jpg);
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.25;
 }
+main{padding: 18rem 0;}
 .container{
     display: grid;
     grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
     grid-template-rows: auto auto;
-    grid-template-areas:
-      "left title"
-      ". img";
+    grid-template-areas: 
+    "left title"
+    ". img";
     column-gap: clamp(1rem, 1vw, 3rem);
     row-gap: 10px;
 
@@ -68,13 +66,7 @@ main{
     padding: 0 clamp(1.5rem, 5vw, 4rem);
     z-index: 1;
 }
-.second-container{
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    gap: 2rem;
-    align-items: stretch;
-}
-.hero-left {
+.hero-left{
     grid-area: left;
     display: flex;
     flex-direction: column;
@@ -87,6 +79,64 @@ main{
     margin-top: clamp(2rem, 6vh, 4rem);
     margin-left: clamp(2rem, 7vw, 5rem);
     transform: translateY(9.5rem);
+}
+.hero-text{grid-area: title; position: relative; z-index: 1; text-align: center;}
+.hero-text h1{
+    margin: 0 0 0.1rem;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    color: #fafafa;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+.container .right{grid-area: img; justify-self: center;}
+.container .right img{
+    display: block;
+    z-index: 1;
+    border-radius: 25px;
+    width: clamp(400px, 40vw, 600px);
+    height: auto;
+    margin-top: -20px;
+    border: 1px solid black
+}
+.band{
+    position: relative;
+    min-height: 115vh;
+    display: block;
+    padding: clamp(24px, 6vw, 80px) clamp(16px, 4vw, 24px);
+}
+.band--roster{background: linear-gradient(180deg, #18453b 0%, #003118 100%);}
+.panel{
+    position: sticky;
+    top: 12vh;
+    margin-inline: auto;
+    max-width: 800px;
+    border-radius: 18px;
+    border: 1px solid #1e2428;
+    background: #1e4c33;
+    box-shadow: 0 14px 40px rgba(0,0,0,.35);
+    margin-top: 300px;
+}
+.panel_media{aspect-ratio: 16/9; background-size: cover; background-position: center;}
+
+.panel_body{padding: clamp(16px, 3vw, 28px); display: flex; align-items: flex-end; flex-direction: row-reverse; overflow: visible;}
+.card_img{padding: clamp(16px, 3vw, 28px); display: flex; align-items: flex-end; flex-direction: row-reverse; overflow: visible; gap: 1rem;}
+h2{margin: .2rem 0 .4rem 0; font-size: clamp(1.4rem, 3.6vw, 2rem); color: #d7e7e0;}
+p{margin: .4rem 0 0 0; color: #d7e7e0; max-width: 55ch;}
+.eyebrow{
+    display: inline-block;
+    background: #0f2621;
+    color: #cfe9df;
+    border: 1px solid #21483f;
+    padding: .38rem .65rem;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: .2px;
+    margin-bottom: .6rem;
+    font-family: 'Courier New', Courier, monospace;
+    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset, rgba(44, 187, 99, .15) 0 1px 2px, rgba(44, 187, 99, .15) 0 2px 4px, rgba(44, 187, 99, .15) 0 4px 8px, rgba(44, 187, 99, .15) 0 8px 16px, rgba(44, 187, 99, .15) 0 16px 32px;
 }
 button{ 
     background-color: #0f2621;
@@ -115,67 +165,16 @@ button:hover{
     box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset, rgba(44,187,99,.25) 0 1px 2px, rgba(44,187,99,.25) 0 2px 4px, rgba(44,187,99,.25) 0 4px 8px, rgba(44,187,99,.25) 0 8px 16px, rgba(44,187,99,.25) 0 16px 32px;
     transform: scale(1.05) rotate(-2deg);
 }
-.band{
-    position: relative;
-    min-height: 115vh;
-    display: block;
-    padding: clamp(24px, 6vw, 80px) clamp(16px, 4vw, 24px);
-}
-.second-container{
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0,1fr));
-    grid-template-areas: "history news";
-    gap: 2rem;
-    align-items: stretch;
-}
-.band--roster{background: linear-gradient(180deg, #18453B 0%, #003118 100%);}
-.panel{
-    position: sticky;
-    top: 12vh;
-    margin-inline:auto;
-    max-width: 800px;
-    border-radius: 18px;
-    border: 1px solid #1e2428;
-    background: #1e4c33;
-    box-shadow: 0 14px 40px rgba(0,0,0,.35);
-    margin-top: 300px;
-}
-.panel_media{
-    aspect-ratio: 16/9;
-    background-size: cover;
-    background-position: center;    
-}
-.panel_body{padding: clamp(16px, 3vw, 28px); display: flex; align-items: flex-end; flex-direction: row-reverse; overflow: visible;}
-.card_img{padding: clamp(16px, 3vw, 28px); display: flex; align-items: flex-end; flex-direction: row-reverse; overflow: visible; gap: 1rem;}
-.eyebrow{
-    display: inline-block;
-    background: #0f2621;
-    color:#cfe9df;
-    border: 1px solid #21483f;
-    padding: .38rem .65rem;
-    border-radius: 999px;
-    font-weight: 700;
-    font-size: 1rem;
-    letter-spacing: .2px;
-    margin-bottom: .6rem;
-    font-family: 'Courier New', Courier, monospace;
-    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset, rgba(44, 187, 99, .15) 0 1px 2px, rgba(44, 187, 99, .15) 0 2px 4px, rgba(44, 187, 99, .15) 0 4px 8px, rgba(44, 187, 99, .15) 0 8px 16px, rgba(44, 187, 99, .15) 0 16px 32px;
-}
-h2{margin: .2rem 0 .4rem 0; font-size: clamp(1.4rem, 3.6vw, 2rem); color: #d7e7e0;}
-p{margin: .4rem 0 0 0; color: #d7e7e0; max-width: 65ch;}
 .panel_body img{
     width: min(450px, 60vw);
     max-width: 100%;
     height: auto;
     display: block;
+    margin-top: -550px;
     filter: drop-shadow(0 0 0 white) drop-shadow(0 0 5px white);
     transition: all 400ms;
-    margin-top: -550px;
 }
-.panel_body img:hover{
-    transform: scale(1.08);
-    filter: drop-shadow(0 0 0 white) drop-shadow(0 0 12px white);
-}
+.panel_body img:hover{ transform: scale(1.08); filter: drop-shadow(0 0 0 white) drop-shadow(0 0 12px white);}
 .card_img img{
     width: min(450px, 60vw);
     max-width: 100%;
@@ -186,45 +185,17 @@ p{margin: .4rem 0 0 0; color: #d7e7e0; max-width: 65ch;}
     border: 1px solid black;
     margin-top: -550px;
 }
-#courses .panel{transform: translateY(-5rem);}
 .card_img img:hover{transform: scale(1.02);}
-.hero-text{
-   grid-area: title;
-   position: relative;
-   z-index: 1;
-   text-align: center;
+#courses .panel, #history .panel, #news .panel{transform: translateY(-5rem);}
+.second-container{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    grid-template-areas: "history news";
+    gap: 2rem;
+    align-items: stretch;
 }
-.hero-text h1{
-    margin: 0 0 0.1rem;
-    font-size: clamp(1.8rem, 4vw, 3rem);
-    color: #fafafa;
-    font-weight: 800;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    text-shadow: 0 10px 30px rgba(0,0,0,0.6);
-}
-.container .right{
-    grid-area: img;
-    justify-self: center;
-}
-.container .right img{
-    display: block;
-    z-index: 1;
-    border-radius: 25px;
-    width: clamp(400px, 40vw, 600px);
-    height: auto;
-    margin-top: -40px;
-    border: 2px solid black;
-}
-#history img{
-    grid-area: history;
-    margin-bottom: 40px;
-}
-#news img{
-    grid-area: news; 
-    max-width: 300px;
-    margin-bottom: 40px;
-}
+#history img{ grid-area: history; margin-bottom: 40px;}
+#news img{ grid-area: news; max-width: 300px; margin-bottom: 40px;}
 
 @media (max-width: 768px) {
     .container{
