@@ -129,8 +129,21 @@ button:hover{
     height: auto;
     display: block;
     margin-top: -350px;
-    filter: drop-shadow(0 0 0 white) drop-shadow(0 0 5px white);
-    transition: all 400ms;
+    filter: drop-shadow(0 0 0 rgb(20, 20, 20)) drop-shadow(0 0 15px rgb(20,20,20));
+}
+.roster-slideshow{
+    width: min(450px, 60vw);
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: opacity 1s ease-in-out, transform 800ms;
+    opacity: 1;
+}
+
+/* fade-out state */
+.roster-slideshow.is-fading{
+    opacity: 0;
 }
 .panel_body img:hover{ transform: scale(1.05); filter: drop-shadow(0 0 0 white) drop-shadow(0 0 12px white);}
 .card_img img{
@@ -225,11 +238,10 @@ button:hover{
         height: auto;
         margin-top: 0;
         align-self: center;
-        padding: 10px;
+        padding: 25px;
     }
     .panel_body img:hover{
         transform: scale(1.01);
-        filter: drop-shadow(0 0 0 white) drop-shadow(0 0 8px white);
     }
     .card_img{
         padding: 1.5rem 1.25rem;

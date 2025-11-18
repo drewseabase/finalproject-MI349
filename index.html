@@ -8,6 +8,47 @@
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="header.css">
 </head>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const rosterImages = [
+        "Images/rileyhough.PNG",
+        "Images/thomaswestphal.PNG",
+        "Images/jackpennewell.PNG",
+        "Images/mosesosterink.PNG",
+        "Images/mikehegarty.PNG",
+        "Images/parkerlambers.PNG",
+        "Images/jaspercane.PNG",
+        "Images/paddybyrnes.PNG",
+        "Images/evanloughridge.PNG",
+        "Images/bradymcardle.PNG",
+        "Images/drewseabase.PNG",
+        "Images/nathanlarson.PNG"
+        ];
+
+        const rosterEl = document.querySelector(".roster-slideshow");
+        if (!rosterEl || rosterImages.length === 0) return;
+
+        let currentIndex = 0;
+
+        rosterEl.src = rosterImages[0];
+
+        function showNextRosterImage() {
+
+        rosterEl.classList.add("is-fading");
+
+        setTimeout(() => {
+            currentIndex = (currentIndex + 1) % rosterImages.length;
+            rosterEl.src = rosterImages[currentIndex];
+        }, 1000);
+
+        setTimeout(() => {
+            rosterEl.classList.remove("is-fading");
+        }, 1100);
+        }
+
+        setInterval(showNextRosterImage, 10000);
+    });
+</script>
 <body>
  <header class="background-img">
     <nav>
@@ -37,7 +78,7 @@
         <article class="panel">
             <div class="panel_media" role="img" aria-label="Team Member"></div>
             <div class="panel_body">
-                <img src="Images/rileyhough.PNG" alt="roster pics">
+                <img class="roster-slideshow" src="Images/rileyhough.PNG" alt="roster pics">
                 <div class="panel_copy">
                     <span class="eyebrow">Roster</span>
                     <h2>Meet the Team</h2>
