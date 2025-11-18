@@ -160,8 +160,8 @@ p{margin: .4rem 0 0 0; color: #d7e7e0; max-width: 65ch;}
     margin-top: -550px;
 }
 .panel_body img:hover{
-    transform: scale(1.05);
-    filter: drop-shadow(0 0 0 white) drop-shadow(0 0 10px white);
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 0 white) drop-shadow(0 0 12px white);
 }
 .card_img img{
     width: min(450px, 60vw);
