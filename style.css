@@ -68,6 +68,12 @@ main{
     padding: 0 clamp(1.5rem, 5vw, 4rem);
     z-index: 1;
 }
+.second-container{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: stretch;
+}
 .hero-left {
     grid-area: left;
     display: flex;
@@ -114,6 +120,13 @@ button:hover{
     min-height: 115vh;
     display: block;
     padding: clamp(24px, 6vw, 80px) clamp(16px, 4vw, 24px);
+}
+.second-container{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    grid-template-areas: "history news";
+    gap: 2rem;
+    align-items: stretch;
 }
 .band--roster{background: linear-gradient(180deg, #18453B 0%, #003118 100%);}
 .panel{
@@ -203,6 +216,16 @@ p{margin: .4rem 0 0 0; color: #d7e7e0; max-width: 65ch;}
     margin-top: -40px;
     border: 2px solid black;
 }
+#history img{
+    grid-area: history;
+    margin-bottom: 40px;
+}
+#news img{
+    grid-area: news; 
+    max-width: 300px;
+    margin-bottom: 40px;
+}
+
 @media (max-width: 768px) {
     .container{
         grid-template-columns: 1fr;
