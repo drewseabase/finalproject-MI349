@@ -169,6 +169,140 @@ button:hover{
 #history img{ grid-area: history; margin-bottom: 40px;}
 #news img{ grid-area: news; max-width: 300px; margin-bottom: 40px;}
 
+@media (max-width: 1000px){
+    main{
+        padding: 6rem 0 0 0;
+    }
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+          "title"
+          "img"
+          "left";
+        row-gap: 1.5rem;
+        justify-items: center;
+        min-height: auto;
+        padding: 0 clamp(1rem, 4vw, 2rem);
+        height: auto;
+        position: relative;
+        z-index: 1;
+    }
+    .hero-text{
+        text-align: center;
+    }
+    .hero-text h1{
+        text-align: center;
+        width: min(90vw, 32rem);
+        font-size: 2.1rem;
+    }
+    .container .right img{
+        margin-top: 0;
+        width: min(80vw, 360px);
+        z-index: 1;
+    }
+    .hero-left{
+        grid-area: left;
+        text-align: center;
+        width: min(90vw, 30rem);
+        margin: 0;
+        margin-bottom: 0.75rem;
+        align-items: center;
+        transform: none;
+        margin-left: 0;
+        font-size: 1.3rem;
+        line-height: 1.5;
+        z-index: 1;
+    }
+    .band{
+        min-height: auto;
+        padding: 1.5rem 1.25rem;
+        margin-top: 2.5rem;
+    }
+    .band--roster{
+        background: #18453B;
+    }
+    .panel{
+        position: static;
+        top: auto;
+        margin-top: 0;
+        max-width: 600px;    
+        border-radius: 14px;
+    }
+    .panel_body{
+        padding: 1.25rem 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        height: auto;
+        text-align: center;
+    }
+    .panel_body img{
+        width: min(220px, 60vw);  
+        max-width: 100%;
+        height: auto;
+        margin-top: 0;
+        align-self: center;
+        padding: 12px;
+    }
+    .panel_body img:hover{
+        transform: scale(1.01);
+    }
+    .card_img{
+        padding: 1.25rem 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        height: auto;
+        text-align: center;
+    }
+    .card_img img{
+        width: min(260px, 60vw); 
+        max-width: 100%;
+        height: auto;
+        margin-top: 0;
+        transition: all 400ms;
+    }
+    h2{
+        font-size: 1.15rem;
+    }
+    .eyebrow{
+        font-size: 0.85rem;
+    }
+    button{
+        font-weight: 500;
+        padding: 6px 16px;
+        margin-top: 0.5rem;
+        margin-right: 0;
+        box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,
+                    rgba(44, 187, 99, .15) 0 1px 2px,
+                    rgba(44, 187, 99, .15) 0 2px 4px,
+                    rgba(44, 187, 99, .15) 0 4px 8px,
+                    rgba(44, 187, 99, .15) 0 8px 16px;
+    }
+    #courses .panel,
+    #history .panel,
+    #news .panel{
+        transform: none;
+    }
+    .second-container{
+        grid-template-columns: repeat(2, minmax(0,1fr));
+        grid-template-areas: "history news";
+        gap: 2rem;
+        align-items: stretch;
+    }
+    #history img,
+    #news img{
+        margin-bottom: 0.75rem;
+    }
+    #history .card_img img,
+    #news .card_img img{
+        margin-top: 0.75rem;
+    }
+}
+
 @media (max-width: 768px) {
 
     main{
