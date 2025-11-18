@@ -111,7 +111,7 @@ button:hover{
 }
 .band{
     position: relative;
-    min-height: 120vh;
+    min-height: 115vh;
     display: block;
     padding: clamp(24px, 6vw, 80px) clamp(16px, 4vw, 24px);
 }
@@ -120,7 +120,7 @@ button:hover{
     position: sticky;
     top: 12vh;
     margin-inline:auto;
-    max-width: 780px;
+    max-width: 800px;
     border-radius: 18px;
     border: 1px solid #1e2428;
     background: #1e4c33;
@@ -170,8 +170,10 @@ p{margin: .4rem 0 0 0; color: #d7e7e0; max-width: 65ch;}
     display: block;
     transition: all 400ms;
     border-radius: 25px;
+    border: 1px solid black;
     margin-top: -550px;
 }
+#courses .panel{transform: translateY(-5rem);}
 .card_img img:hover{transform: scale(1.02);}
 .hero-text{
    grid-area: title;
@@ -198,7 +200,7 @@ p{margin: .4rem 0 0 0; color: #d7e7e0; max-width: 65ch;}
     border-radius: 25px;
     width: clamp(400px, 40vw, 600px);
     height: auto;
-    margin-top: -20px;
+    margin-top: -40px;
     border: 2px solid black;
 }
 @media (max-width: 768px) {
