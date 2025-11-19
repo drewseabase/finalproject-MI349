@@ -48,5 +48,34 @@
     border-radius: 24px;
     display: block;
     border: 2px solid #0f2621;
-    box-shadow: 0 16px 40px rgba(0,0,0,.55);
+    box-shadow: 0 16px 40px rgba(0,0,0,.55)
 }
+.profile-info h2{
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(1.6rem, 3vw, 2rem);
+    margin: 0 0 .35rem 0;
+    color: #cfe1d7;
+}
+.profile-meta{font-size: 0.95rem; color: #cfe1d7; margin: 0 0 1rem 0;}
+.profile-bio{ font-size: 0.98rem; line-height: 1.7; margin: 0 0 1.5rem 0; color: #e4f0e8;}
+.profile-details{display:grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1.25rem;}
+.detail-box{
+    background: #15372a;
+    border-radius: 16px;
+    padding: 0.9rem 1rem;
+    border: 1px solid #27513c;
+}
+.detail-box h3{
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    margin: 0 0 .4rem 0;
+    color: #d6e5da;
+}
+.detail-box ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.9rem;
+    color: #d6e5da;
+}
+.detail-box li + li{ margin-top: 0.25rem;}
