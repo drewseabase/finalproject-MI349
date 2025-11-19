@@ -168,6 +168,7 @@ body{
   font-family: 'Oswald', sans-serif;
   font-size: 1.1rem;
   margin: 0 0 .35rem 0;
+  letter-spacing: .05rem;
 }
 
 .card-meta{
