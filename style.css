@@ -61,7 +61,7 @@ main{padding: 18rem 0 0 0;}
 }
 .band{ /* scrollable feature*/
     position: relative;
-    min-height: 110vh;
+    min-height: 120vh;
     display: block;
     padding: clamp(24px, 6vw, 80px) clamp(16px, 4vw, 24px);
 }
