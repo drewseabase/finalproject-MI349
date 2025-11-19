@@ -31,20 +31,19 @@
     </section>
 
 
-<section class="roster-profile">
+<section class="roster-profile featured">
         <div class="profile-photo">
-            <img src="RosterImages/rileyheadshot.JPG" alt="rileyheadshot">
+            <img id="featured-photo" src="RosterImages/rileyheadshot.JPG" alt="rileyheadshot">
         </div>
-
         <div class="profile-info">
-            <h2>Riley Hough</h2>
-            <p class="profile-meta">
+            <h2 id="featured-name">Riley Hough</h2>
+            <p id="featured-meta" class="profile-meta">
                 Senior · Hometown: Hartland, MI · Major: "Kinesiology"
             </p>
-            <p class="profile-bio">
-                "Riley is a steady presence in the Spartan pack, known for his closing speed and
+            <p id="featured-bio" class="profile-bio">
+                Riley is a steady presence in the Spartan pack, known for his closing speed and
                 consistency in championship races. He leads by example in workouts and sets the tone
-                for the team’s competitive mindset every day.""
+                for the team’s competitive mindset every day.
             </p>
 
         <div class="profile-details">
@@ -73,9 +72,17 @@
     <section class="roster-grid-section">
       <h2 class="section-title">Full Roster</h2>
       <div class="roster-grid">
+
         <!--Riley Hough-->
-         <article class="roster-card">
-          <img src="RosterImages/rileyheadshot.JPG" alt="jackpennewell">
+         <article class="roster-card"
+         data-name="Riley Hough"
+         data-meta="Senior · Kinesiology · Hartland, MI"
+         data-bio="Riley is a steady presence in the Spartan pack, known for his closing speed and
+                consistency in championship races. He leads by example in workouts and sets the tone
+                for the team’s competitive mindset every day."
+         data-img="RosterImages/rileyheadshot.JPG">
+
+          <img src="RosterImages/rileyheadshot.JPG" alt="rileyhough">
           <div class="card-body">
             <h3>Riley Hough</h3>
             <p class="card-meta">Senior · "Kinesiology" · Hartland, MI</p>
@@ -85,7 +92,11 @@
           </div>
         </article>
         <!-- Thomas Westphal -->
-        <article class="roster-card">
+        <article class="roster-card"
+        data-name="Thomas Westphal"
+        data-meta="Sophomore · Economics · Fair Haven, MI"
+        data-bio="Veteran leader who brings experience, toughness, and a calm presence on race day."
+        data-img="RosterImages/thomasheadshot.JPG">
           <img src="RosterImages/thomasheadshot.JPG" alt="thomaswestphal">
           <div class="card-body">
             <h3>Thomas Westphal</h3>
@@ -260,6 +271,31 @@
                 <p>Spartans run as one.</p>
             </div>
         </div>
-    </footer>
+  </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+        const featuredImg = document.getElementById("featured-photo");
+        const featuredName = document.getElementById("featured-name");
+        const featuredMeta = document.getElementById("featured-meta");
+        const featuredBio = document.getElementById("featured-bio");
+
+        const cards = document.querySelectorAll(".roster-card");
+
+        cards.forEach(card => {
+            card.addEventListener("click" ,()=>{
+                const name = card.dataset.name;
+                const meta = card.dataset.meta;
+                const bio = card.dataset.bio;
+                const img = card.dataset.img;
+
+                featuredName.textContent = name;
+                featuredMeta.textContent = meta;
+                featuredBio.textContent = bio;
+                featuredImg.src = img;
+                featuredImg.alt = name + "headshot";
+            });
+        });
+    });
+  </script>
 </body>
 </html>

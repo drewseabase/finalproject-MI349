@@ -145,6 +145,7 @@ body{
   display: flex;
   flex-direction: column;
   transition: transform 180ms ease, box-shadow 180ms ease;
+  cursor: pointer;
 }
 
 .roster-card img{
