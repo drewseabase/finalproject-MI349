@@ -2,7 +2,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 *,*::before,*::after{box-sizing:border-box;}
 
-body{
-    margin:0;
-    
+.roster-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 5rem 1.5rem 4rem;
+}
+.roster-hero{
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 1;
+    color: #dce6dd;
+    font-weight: 500;
+}
+.roster-hero h1{
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    margin-bottom: 0.75rem;
+}
+.roster-intro{
+    max-width: 680px;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.6; 
+}
+
+/*Profiles*/
+
+.roster-profile{
+    display: grid;
+    grid-template-columns: minmax(0,1.1fr) minmax(0,1.4fr);
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+.profile-photo img{
+    width: 100%;
+    max-width: 620px;
+    border-radius: 24px;
+    display: block;
+    border: 2px solid #0f2621;
+    box-shadow: 0 16px 40px rgba(0,0,0,.55);
 }
