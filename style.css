@@ -82,7 +82,7 @@ main{padding: 18rem 0 0 0;}
 .panel_body{padding: clamp(16px, 3vw, 28px); display: flex; align-items: center; flex-direction: row-reverse; overflow: visible; gap: 1rem; height: 400px; }
 .card_img{padding: clamp(16px, 3vw, 28px); display: flex; align-items: center; flex-direction: row-reverse; overflow: visible; gap: 1rem; height: 500px;}
 h2{margin: .2rem 0 .4rem 0; font-size: clamp(1.4rem, 3.6vw, 2rem); color: #d7e7e0;}
-p{margin: .4rem 0 0 0; color: #d7e7e0; max-width: 85ch;}
+p{margin: .4rem 0 0 0; color: #d7e7e0; max-width: 85ch; line-height: 20px;}
 .eyebrow{
     display: inline-block;
     background: #313d3a;
@@ -239,12 +239,13 @@ button:hover{
         text-align: center;
     }
     .panel_body img{
-        width: min(220px, 60vw);  
+        width: min(320px, 60vw);  
         max-width: 100%;
         height: auto;
-        margin-top: 0;
+        margin-top: -150px;
         align-self: center;
-        padding: 12px;
+        padding: 15px;
+
     }
     .panel_body img:hover{
         transform: scale(1.01);
