@@ -34,7 +34,7 @@ main{padding: 18rem 0 0 0;}
     line-height: 1.6;
     margin-top: clamp(2rem, 6vh, 4rem);
     margin-left: clamp(2rem, 7vw, 5rem);
-    transform: translateY(9.5rem);
+    transform: translateY(11rem);
 }
 .hero-text{grid-area: title; position: relative; z-index: 1; text-align: center;}
 .hero-text h1{ /* Title*/
@@ -82,7 +82,7 @@ main{padding: 18rem 0 0 0;}
 .panel_body{padding: clamp(16px, 3vw, 28px); display: flex; align-items: center; flex-direction: row-reverse; overflow: visible; gap: 1rem; height: 400px; }
 .card_img{padding: clamp(16px, 3vw, 28px); display: flex; align-items: center; flex-direction: row-reverse; overflow: visible; gap: 1rem; height: 500px;}
 h2{margin: .2rem 0 .4rem 0; font-size: clamp(1.4rem, 3.6vw, 2rem); color: #d7e7e0;}
-p{margin: .4rem 0 0 0; color: #d7e7e0; max-width: 85ch; line-height: 20px;}
+p{margin: .4rem 0 0 0; color: #d7e7e0; max-width: 85ch;}
 .eyebrow{
     display: inline-block;
     background: #313d3a;
@@ -130,6 +130,7 @@ button:hover{
     display: block;
     margin-top: -350px;
     filter: drop-shadow(0 0 0 rgb(20, 20, 20)) drop-shadow(0 0 15px rgb(20,20,20));
+    opacity: .95;
 }
 .roster-slideshow{
     width: min(450px, 60vw);
@@ -239,10 +240,10 @@ button:hover{
         text-align: center;
     }
     .panel_body img{
-        width: min(320px, 60vw);  
+        width: min(300px, 60vw);  
         max-width: 100%;
         height: auto;
-        margin-top: -150px;
+        margin-top: -120px;
         align-self: center;
         padding: 15px;
 
