@@ -213,6 +213,12 @@ button:hover{
 }
 #history img{ grid-area: history; margin-bottom: 40px;}
 #news img{ grid-area: news; max-width: 300px; margin-bottom: 40px;}
+@media(max-width: 1200px){
+    main{
+        background: blue;
+    }
+}
+
 @media (max-width: 1000px){
     main{
         padding: 6rem 0 0 0;
