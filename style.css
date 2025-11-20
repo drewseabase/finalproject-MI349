@@ -129,7 +129,7 @@ p{
     margin-bottom: .3rem;
     font-family: 'Courier New', Courier, monospace;
 }
-button{ 
+.btn{ 
     background-color: #0f2621;
     border-radius: 100px;
     box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset, 
@@ -151,13 +151,13 @@ button{
     -webkit-user-select: none;
     touch-action: manipulation;
 }
-button a{
+.btn a{
     text-decoration: none;
     color: floralwhite;
     font-size: 1.05rem;
     font-family: 'Courier New', Courier, monospace;
 }
-button:hover{ 
+.btn:hover{ 
     box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset, 
                 rgba(44,187,99,.25) 0 1px 2px, 
                 rgba(44,187,99,.25) 0 2px 4px, 
@@ -307,7 +307,7 @@ button:hover{
     }
     h2{font-size: 1.15rem;}
     .eyebrow{font-size: 0.85rem;}
-    button{
+    .button a{
         font-weight: 500;
         padding: 6px 16px;
         margin-top: 0.5rem;
@@ -431,7 +431,7 @@ button:hover{
     }
     h2{font-size: 1.15rem;}
     .eyebrow{font-size: 0.85rem;}
-    button{
+    .button a{
         font-weight: 500;
         padding: 6px 16px;
         margin-top: 0.5rem;
@@ -551,7 +551,7 @@ button:hover{
 
     h2{font-size: 1.2rem;}
     .eyebrow{font-size: 0.9rem;}
-    button{
+    .button a{
         font-weight: 500;
         padding: 6px 16px;
         margin-top: 0.75rem;
