@@ -75,7 +75,6 @@ main{padding: 18rem 0 0 0;}
 .band--roster{background: linear-gradient(180deg, #18453b 0%, #003118 100%);}
 .panel{
     position: relative;
-    top: auto;
     margin-inline: auto;
     max-width: 800px;
     border-radius: 18px;
