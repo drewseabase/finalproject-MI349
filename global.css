@@ -45,7 +45,7 @@ nav a:hover{
     min-height: 80vh;
     background-size: cover;
     background-position: center;
-    background-image: url(Images/IMG_6893.jpg);
+    background-image: url(Images/background.jpg);
     inset: 0;
     pointer-events: none;
     opacity: 0.25;
