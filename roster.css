@@ -141,7 +141,6 @@ body{
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 1.5rem;
 }
-
 .roster-card{
   background: #1e4c33;
   border-radius: 18px;
@@ -150,23 +149,14 @@ body{
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform 180ms ease, box-shadow 180ms ease;
-  will-change: transform, box-shadow;
   cursor: pointer;
 }
-
 .roster-card img{
   width: 100%;
   display: block;
   object-fit: cover;
   height: 260px;
 }
-
-.roster-card:hover{
-  transform: translateY(-3px);
-  box-shadow: 0 18px 40px rgba(0,0,0,.55);
-}
-
 .card-body{
   padding: 0.9rem 1.1rem 1.2rem;
 }
