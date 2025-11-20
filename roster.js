@@ -49,13 +49,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-  
     if (cards.length > 0) {
         const randomIndex = Math.floor(Math.random() * cards.length);
         updateFeaturedFromCard(cards[randomIndex]);
     }
 
-    // Click to feature
     cards.forEach(card => {
         card.addEventListener("click", () => {
             updateFeaturedFromCard(card);
