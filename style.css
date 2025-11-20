@@ -214,7 +214,7 @@ button:hover{
 #history img{ grid-area: history; margin-bottom: 40px;}
 #news img{ grid-area: news; max-width: 300px; margin-bottom: 40px;}
 
-@media(max-with: 1200px){
+@media(max-with: 1300px){
      #courses .panel,
     #history .panel,
     #news .panel{
