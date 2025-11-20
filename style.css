@@ -214,6 +214,18 @@ p{
 #history img{ grid-area: history; margin-bottom: 40px;}
 #news img{ grid-area: news; max-width: 300px; margin-bottom: 40px;}
 
+.visually-hidden{
+    position:absolute;
+    width: 1px;
+    height: 1px;
+    padding:0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border:0;
+}
+
 @media(max-width: 1300px){
     main{
         padding: 6rem 0 0 0;
