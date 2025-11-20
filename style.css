@@ -222,6 +222,7 @@ button:hover{
 @media (max-width: 1000px){
     main{
         padding: 6rem 0 0 0;
+        background: red;
     }
     .container{
         grid-template-columns: 1fr;
