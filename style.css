@@ -77,11 +77,9 @@ main{padding: 18rem 0 0 0;}
     border: 1px solid black
 }
 
-/* SECTION WRAPPER (bands) */
-.band{ /* scrollable feature*/
+.band{ 
     position: relative;
-    /* CHANGED: reduce height so bands aren’t huge on Netlify */
-    min-height: 80vh; 
+    min-height: auto; 
     display: block;
     padding: clamp(24px, 6vw, 80px) clamp(16px, 4vw, 24px);
 }
@@ -90,18 +88,16 @@ main{padding: 18rem 0 0 0;}
     background: linear-gradient(180deg, #18453b 0%, #003118 100%);
 }
 
-/* CARDS */
 .panel{
-    position: sticky;
-    top: 12vh;
+    position: relative;
+    top: auto;
     margin-inline: auto;
     max-width: 800px;
     border-radius: 18px;
     border: 1px solid #1e2428;
     background: #1e4c33;
     box-shadow: 0 14px 40px rgba(0,0,0,.35);
-    /* CHANGED: was 300px, which made things feel huge */
-    margin-top: 120px;
+    margin-top: 3rem;
 }
 
 .panel_media{
@@ -201,7 +197,7 @@ button:hover{
     max-width: 100%;
     height: auto;
     display: block;
-    margin-top: -350px;
+    margin-top: -150px;
     filter: drop-shadow(0 0 0 rgb(20, 20, 20)) drop-shadow(0 0 15px rgb(20,20,20));
     opacity: .95;
 }
