@@ -138,8 +138,8 @@ body{ margin: 0; font-family: 'Inter', sans-serif;}
     top: 0;
     bottom: 0;
     width: 4px;
-    background: linear-gradient(180deg, #2fb15f, #0f2621);
-    opacity: 0.7;
+    background: linear-gradient(180deg, #8fb19c, #182321);
+    opacity: 0.8;
 }
 .layout{
     display:grid;
@@ -257,4 +257,5 @@ h4{
 .level-1{width: 10%;}
 .level-2{width: 40%;}
 .level-3{width: 60%;}
+.level-4{width: 80%;}
 
