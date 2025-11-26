@@ -2,7 +2,7 @@
 html{scroll-behavior: smooth;}
 
 body{
-    background-color:#18453B;
+    background: linear-gradient(180deg, #18453b 0%, #003118 75%);
     font-family: 'Inter', sans-serif;
     margin:0;
 }
@@ -72,7 +72,7 @@ main{padding: 18rem 0 0 0;}
     display: block;
     padding: clamp(24px, 6vw, 80px) clamp(16px, 4vw, 24px);
 }
-.band--roster{background: linear-gradient(180deg, #18453b 0%, #003118 100%);}
+
 .panel{
     position: relative;
     margin-inline: auto;

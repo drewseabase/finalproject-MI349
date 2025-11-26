@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&display=swap');
 html{scroll-behavior: smooth;}
 body{
-    background-color:#18453B;
+    background: linear-gradient(180deg, #18453b 0%, #003118 75%);
     font-family: 'Inter', sans-serif;
     margin:0;
 }

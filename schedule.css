@@ -138,7 +138,7 @@ body{ margin: 0; font-family: 'Inter', sans-serif;}
     top: 0;
     bottom: 0;
     width: 4px;
-    background: linear-gradient(180deg, #8fb19c, #182321);
+    background: linear-gradient(180deg, #8fb19c 10%, #050807 75%);
     opacity: 0.8;
 }
 .layout{
