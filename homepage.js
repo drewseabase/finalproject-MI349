@@ -28,12 +28,9 @@
         setTimeout(() => {
             currentIndex = (currentIndex + 1) % rosterImages.length;
             rosterEl.src = rosterImages[currentIndex];
-        }, 1500);
-
-        setTimeout(() => {
             rosterEl.classList.remove("is-fading");
-        }, 1100);
+        }, 1000);
         }
 
-        setInterval(showNextRosterImage, 5000);
+        setInterval(showNextRosterImage, 6000);
     });
