@@ -32,5 +32,5 @@
         }, 2000);
         }
 
-        setInterval(showNextRosterImage, 6000);
+        setInterval(showNextRosterImage, 5000);
     });
