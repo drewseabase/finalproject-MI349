@@ -71,6 +71,7 @@ main{padding: 18rem 0 0 0;}
     min-height: auto; 
     display: block;
     padding: clamp(24px, 6vw, 80px) clamp(16px, 4vw, 24px);
+    margin-bottom: 100px;
 }
 
 .panel{

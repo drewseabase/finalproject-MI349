@@ -199,9 +199,9 @@ body{ margin: 0; font-family: 'Inter', sans-serif;}
     display: grid;
     grid-template-columns: repeat(2, minmax(0,1fr));
     gap: 0.6rem;
-  
 }
-.field{font-size: 0.86rem; color: #d6e5da;}
+
+.field{font-size: 0.86rem; color: #d6e5da; display: flex; flex-direction: column; flex-wrap: wrap;}
 .field-label{font-weight: 600; margin-right: 0.2rem;}
 
 .meetprofile{
@@ -255,7 +255,8 @@ h4{
  
 }
 .level-1{width: 10%;}
-.level-2{width: 40%;}
-.level-3{width: 60%;}
-.level-4{width: 80%;}
+.level-2{width: 30%;}
+.level-3{width: 55%;}
+.level-4{width: 65%;}
+.level-5{width: 80%;}
 
