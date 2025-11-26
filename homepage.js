@@ -28,7 +28,7 @@
         setTimeout(() => {
             currentIndex = (currentIndex + 1) % rosterImages.length;
             rosterEl.src = rosterImages[currentIndex];
-        }, 1000);
+        }, 1500);
 
         setTimeout(() => {
             rosterEl.classList.remove("is-fading");
