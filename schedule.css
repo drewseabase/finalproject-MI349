@@ -144,7 +144,7 @@ body{ margin: 0; font-family: 'Inter', sans-serif;}
 .layout{
     display:grid;
     grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.5fr);
-    gap: 2rem;
+    gap: 3rem;
 }
 .item{
     position: relative;
@@ -169,6 +169,10 @@ body{ margin: 0; font-family: 'Inter', sans-serif;}
     border: 1px solid #1e2428;
     box-shadow: 0 10px 30px rgba(0,0,0,.4);
     padding: 0.9rem 1.1rem 1.1rem;
+    transition: transform 400ms ease;
+}
+.timeline-content:hover{
+    transform: translateY(-2px) scale(1.02);
 }
 .timeline-header{
     display: flex;
@@ -211,9 +215,12 @@ body{ margin: 0; font-family: 'Inter', sans-serif;}
     border: 1px solid #335b45;
     padding: 0.9rem 1rem;
     max-width: 300px;
-    margin-bottom: 50px;
-    box-shadow: 0 10px 30px rgba(0,0,0,.4);
-    
+    margin-bottom: 100px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.4); 
+    transition: transform 400ms ease;
+}
+.meetprofile:hover{
+    transform: translateY(-2px) scale(1.02);
 }
 h4{
     font-family: 'Oswald', sans-serif;
