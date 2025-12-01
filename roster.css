@@ -149,8 +149,8 @@ body{
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform 180ms ease, box-shadow 180ms ease;
-  will-change: transform, box-shadow;
+  transition: transform 180ms ease;
+  will-change: transform;
   cursor: pointer;
 }
 
