@@ -81,7 +81,7 @@ main{padding: 18rem 0 0 0;}
     max-width: 800px;
     border-radius: 18px;
     border: 1px solid #1e2428;
-    background: #1e4c33;
+    background: linear-gradient(130deg, rgba(35, 73, 57, 0.96), rgba(4,13,9,0.98));
     box-shadow: 0 14px 40px rgba(0,0,0,.35);
     margin-top: 3rem;
 }
