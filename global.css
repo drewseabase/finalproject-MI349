@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&display=swap');
 html{scroll-behavior: smooth;}
 body{
-    background: linear-gradient(180deg, #18453b 0%, #003118 75%);
+    background: radial-gradient(circle at top left, #1d5a47 0, #123f32 50%, #0a1d17 100%);
     font-family: 'Inter', sans-serif;
     margin:0;
 }
@@ -48,7 +48,7 @@ nav a:hover{
     background-image: url(Images/background.jpg);
     inset: 0;
     pointer-events: none;
-    opacity: 0.25;
+    opacity: 0.45;
 }
 .site-footer{
     background-color: #050806;
