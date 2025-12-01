@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
-*, *::before *::after{box-sizing: border-box;}
+*, *::before, *::after{box-sizing: border-box;}
 
 body{ margin: 0; font-family: 'Inter', sans-serif;}
 
@@ -266,4 +266,73 @@ h4{
 .level-3{width: 55%;}
 .level-4{width: 65%;}
 .level-5{width: 80%;}
+
+@media (max-width: 900px) {
+
+
+  .timeline-title{margin-left: 30px;}
+ 
+  .layout {
+    grid-template-columns: 1fr;   
+    gap: .1rem;                
+  }
+  .meetprofile {
+    max-width: 100%;              
+    margin-bottom: 10rem;          
+  }
+  .meets-list {
+    transform: none;              
+    padding-left: 40px;  
+    margin: 0 auto;        
+  }
+  .meets-list::before {
+    left: 0;                   
+    top: 0;
+    bottom: 0;                   
+  }
+  .item {
+    padding-left: 0;              
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .timeline-marker {
+    left: -46px;                  
+    top: 8rem;                  
+  }
+}
+
+@media(max-width: 600px){
+
+    .schedule-layout{justify-content: stretch;}
+    .timeline-title{margin-left: 50px;}
+    .layout {
+    grid-template-columns: 1.1fr;   
+    gap: 0;      
+    max-width: 400px;          
+  }
+  .meetprofile {
+    max-width: 100%;              
+    margin-bottom: 10rem;          
+  }
+  .meets-list {
+    transform: none;              
+    padding-left: 80px;     
+    margin: 0 auto;     
+  }
+  .meets-list::before {
+    left: 10px;                   
+    top: 0;
+    bottom: 0;                   
+  }
+  .item {
+    padding-left: 0;              
+    text-align: center;
+    margin-bottom: 1.5rem;
+    
+  }
+  .timeline-marker {
+    left: -76px;                  
+    top: 5rem;                  
+  }
+}
 
