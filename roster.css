@@ -10,7 +10,6 @@
 
 body{
   margin: 0;
-  background-color: #18453B;
   color: #f5f7f5;
   font-family: 'Inter', sans-serif;
 }
@@ -40,7 +39,7 @@ body{
   margin: 0 auto;
   font-size: 1rem;
   line-height: 1.6;
-  color: #dce6dd;
+  font-weight: 500;
 }
 
 .roster-profile{

@@ -30,6 +30,7 @@ body{ margin: 0; font-family: 'Inter', sans-serif; }
     font-size: 1rem;
     line-height: 1.7;
     color: #dce6dd;
+    font-weight: 500;
 }
 .schedule-layout{
     display: flex;

@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+.news-page{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 1.5rem 4rem;
+}
+.news-title{
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    color: #dce6dd;
+}
+.news-title h1{
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    margin-bottom: 0.75rem;
+}
+.subtitle{
+    max-width: 680px;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 500;
+    margin-bottom: 4rem;
+}
+.news-section{
+    position: relative;
+    z-index: 1;
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(35, 73, 57, 0.96), rgba(4,13,9,0.98));
+    border: 1px solid #1e2428;
+    box-shadow: 0 16px 40px rgba(0,0,0,.55);
+    padding: 1.2rem 1.3rem 1.1rem;
+    margin-bottom: 4rem;
+    color: #dce6dd;
+}
+.section-header{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+h2{font-size: 1.3rem; margin: 0 auto 7px; text-transform: uppercase;}
+.tagline{margin: 0; font-size: 0.8rem; max-width: 320px;}
+.pill{
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    border: 1px solid #53d898;
+    color: #53d898;
+    flex-shrink: 0;
+}
+.race-grid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+.race-card{
+    flex: 1 1 260px;
+    max-width: 350px;
+    background: radial-gradient(circle at top left, #1b3a2a, #09140f);
+    border-radius: 16px;
+    padding: 1.25rem;
+    border: 2px solid rgba(255,255,255,0.08);
+    box-shadow: 0 6px 20px rgba(48, 47, 47, 0.55);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+.meta{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.8rem;
+    flex-wrap: wrap;
+}
+.course{
+    color: #53d898;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.11em;
+}
+h3{ font-size: 1rem; margin: 10px 0 0 0; font-weight: 600;}
+.summary{margin: 0; font-size: 0.9rem; color: #b7c3bd; line-height: 1.4;}
+.details{
+    display: flex;
+    justify-content: space-between;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #b7c3bd;
+}
+.chip{padding: 0.25rem 0.6rem; border-radius: 999px; border: 1px solid #53d898; font-size: 0.75rem;}
