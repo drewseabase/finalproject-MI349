@@ -116,7 +116,6 @@ nav a:hover{
     letter-spacing: 0.08em;
     text-transform: uppercase;
 }
-
 @media (max-width: 900px) {
   main {
     padding-top: 14rem; 
