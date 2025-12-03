@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
         } else {
-          entry.target.classList.remove("visible");  // 🔥 this makes them disappear again
+          entry.target.classList.remove("visible"); 
         }
       });
     },
