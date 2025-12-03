@@ -246,6 +246,15 @@ body{
   .profile-info{
     text-align: left;
   }
+  .profile-meta{
+    font-size: 0.75rem;
+  }
+  .profile-bio{
+    font-size: 0.85rem;
+  }
+  .detail-box{
+    padding: 0.8rem 0.9rem;
+  }
 }
 
 @media (max-width: 600px){
@@ -257,4 +266,10 @@ body{
     width: 220px;
     height: 150px;
   }
+}
+
+@media (max-width: 400px){
+  .profile-meta{font-size: 0.65rem;}
+  .profile-bio{font-size: 0.75rem;}
+  .detail-box{padding: 0.6rem, 0.7rem;}
 }
