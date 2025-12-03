@@ -101,7 +101,7 @@ h2{font-size: 1.3rem; margin: 0 auto 7px; text-transform: uppercase;}
     letter-spacing: 0.11em;
 }
 h3{ font-size: 1rem; margin: 10px 0 0 0; font-weight: 600;}
-.summary{margin: 0; font-size: 0.9rem; color: #b7c3bd; line-height: 1.4;}
+.summary{margin: 0; font-size: 0.9rem; color: #dce6dd; line-height: 1.4; font-weight: 6s00;}
 .details{
     display: flex;
     justify-content: space-between;
@@ -110,6 +110,40 @@ h3{ font-size: 1rem; margin: 10px 0 0 0; font-weight: 600;}
     margin-top: 0.5rem;
     font-size: 0.8rem;
     font-weight: 500;
-    color: #b7c3bd;
+    color: #dce6dd;
 }
 .chip{padding: 0.25rem 0.6rem; border-radius: 999px; border: 1px solid #53d898; font-size: 0.75rem;}
+
+.prog-list{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+.prog-row{
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 0.75rem;
+    align-items: center;
+    font-size: 0.85rem;
+    padding: 0.55rem 0.75rem;
+    border-radius: 12px;
+    background: rgba(3,12,8,0.85);
+    border: 1.5px solid rgba(83, 216, 152, 0.18);
+    margin-bottom: 0.5rem;
+}
+.prog-header{
+    opacity: 0.65;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    border: none;
+    background: transparent;
+    padding-inline: 0.25rem;
+    margin-bottom: 0.rem;
+}
+.athlete{font-weight: 600;}
+.event{color: #b7c3bd; font-size: 0.8rem;}
+.time{display: flex; align-items: center; gap: 0.3rem;}
+.time span{font-variant-numeric: tabular-nums;}
+.arrow{font-size: 1rem; color:#53d898;}
+.race{color: #b7c3bd; font-size: 0.8rem;}
