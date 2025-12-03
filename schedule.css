@@ -2,7 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 *, *::before, *::after{box-sizing: border-box;}
 
-body{ margin: 0; font-family: 'Inter', sans-serif; }
+body{
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
 
 .meets-page{
     max-width: 1200px;
@@ -24,14 +27,12 @@ body{ margin: 0; font-family: 'Inter', sans-serif; }
     color: #dce6dd;
 }
 .schedule-intro{
-    max-width: 720px;
-    font-family: 'Oswald', sans-serif;
+    max-width: 680px;
     margin: 0 auto;
     font-size: 1rem;
-    letter-spacing: 3px;
-    line-height: 1.7;
+    line-height: 1.6;
+    font-weight: 500;
     color: #dce6dd;
-    font-weight: 900;
 
 }
 .schedule-layout{
