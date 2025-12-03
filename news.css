@@ -70,7 +70,7 @@ h2{font-size: 1.3rem; margin: 0 auto 7px; text-transform: uppercase;}
 .race-grid{
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 1.3rem;
     justify-content: center;
 }
 .race-card{
@@ -148,3 +148,17 @@ h3{ font-size: 1rem; margin: 10px 0 0 0; font-weight: 600;}
 .time span{font-variant-numeric: tabular-nums;}
 .arrow{font-size: 1rem; color:#53d898;}
 .race{color: #b7c3bd; font-size: 0.8rem;}
+
+.training-meta{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 0.4rem;
+    flex-wrap: wrap;
+}
+.day-name{ font-weight: 600;}
+.training-label{text-transform: uppercase; color: #53d898; letter-spacing: 0.1em; font-size: 0.65rem;}
+.description{margin: 0 0 0.4rem; color: #d1d7d4; font-weight: 500; text-align: center;}
+.training-notes{margin: 0; padding-left: 1.1rem; color: #8ea49a; font-size: 0.8rem;}
+li{margin-bottom: 5px;}
