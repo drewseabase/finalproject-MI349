@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
-html{scroll-behavior: smooth;}
+html{scroll-behavior: smooth; max-width: 100%;}
 body{
     background: linear-gradient(to bottom, #1d5a47 0, #123f32 50%, #0a1d17 100%);
     font-family: 'Inter', sans-serif;
     margin:0;
+    overflow-x: hidden;
 }
 main{padding: 18rem 0 0 0;}
 header{
@@ -114,4 +115,65 @@ nav a:hover{
     font-size: 0.95rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  main {
+    padding-top: 14rem; 
+  }
+  nav ul {
+    width: 100%;
+    max-width: 100%;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+  }
+  nav a {
+    font-size: 1rem;
+  }
+  .background-img::before {
+    min-height: 65vh;   
+    background-position: center top;
+  }
+  .footer-inner {
+    gap: 1.25rem 2rem;
+  }
+}
+@media (max-width: 600px) {
+  main {
+    padding-top: 11rem;  
+  }
+  nav ul {
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: wrap;        
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 0.75rem 1rem;
+  }
+  nav a {
+    font-size: 0.9rem;
+    padding: 4px 8px;
+  }
+  .background-img::before {
+    min-height: 55vh;      
+    background-size: cover;
+    background-position: center;
+  }
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer-nav ul {
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+}
+@media (max-width: 400px) {
+  nav a {
+    font-size: 0.82rem;
+    padding: 3px 6px;
+  }
+  main {
+    padding-top: 9.5rem;
+  }
 }
