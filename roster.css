@@ -404,7 +404,7 @@ body{
     letter-spacing: 0.08em;
     cursor: pointer;
     white-space: nowrap;
-    transform: translateX(190px);
+    transform: translateX(100px);
   }
   .control-btn:active{
     transform: translateY(1px);
