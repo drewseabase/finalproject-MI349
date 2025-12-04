@@ -136,6 +136,7 @@ nav a:hover{
   .footer-inner {
     gap: 1.25rem 2rem;
     flex-direction: row;
+    align-items: flex-start;
   }
 }
 @media (max-width: 600px) {
@@ -176,5 +177,5 @@ nav a:hover{
   main {
     padding-top: 9.5rem;
   }
-  .footer-inner{flex-direction: row;}
+  .footer-inner{flex-direction: row; align-items: flex-start;}
 }
