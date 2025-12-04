@@ -414,7 +414,6 @@ h4{
 
 @media(max-width: 400px){
 
-   .schedule-layout{justify-content: stretch;}
     .date{white-space: nowrap;}
     sup{ font-size: 0.6em; line-height: 1; margin-left: 1px; vertical-align: text-top;}
     .timeline-title{margin-left: 50px;}
@@ -447,5 +446,28 @@ h4{
     left: -76px;                  
     top: 8rem;                  
   }
+  .schedule-layout {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .table-wrapper {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto 3rem;
+    padding: 0.8rem;
+    overflow-x: auto;
+  }
+    .table {
+    font-size: 0.75rem;
+    font-weight: 500;
+    flex-wrap: nowrap;
+  }
+  .table th,
+  .table td {
+    padding: 0.35rem 0.35rem;
+    text-align: center;
+  }
+  .type{padding: 0.05rem 0.5rem; font-size: 0.60rem; font-weight: 500;}
 }
 
