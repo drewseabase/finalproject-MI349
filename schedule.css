@@ -56,6 +56,7 @@ body{
     box-shadow: 0 12px 32px;
     padding: 1.2rem 1.3rem 1.1rem;
     margin-bottom: 4rem;
+    max-width: 550px;
 }
 .table{
     width: 100%;
@@ -342,10 +343,11 @@ h4{
     left: -76px;                  
     top: 8rem;                  
   }
+  .schedule-layout{max-width: 50px;}
 }
 
 @media(max-width: 400px){
-  
+
    .schedule-layout{justify-content: stretch;}
     .date{white-space: nowrap;}
     sup{ font-size: 0.6em; line-height: 1; margin-left: 1px; vertical-align: text-top;}
