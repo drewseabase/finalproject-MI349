@@ -529,11 +529,11 @@ h4{
   }
   .date {
     white-space: nowrap;
-    padding: 0.35rem 0.15rem;
+    padding: 0.35rem 0.2rem;
     font-size: 0.55rem;
   }
   .type {
-    padding: 0.25rem 0.15rem;
+    padding: 0.25rem 0.2rem;
     font-size: 0.35rem;
     font-weight: 400;
   }
