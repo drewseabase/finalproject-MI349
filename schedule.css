@@ -406,7 +406,7 @@ h4{
   }
   .table th,
   .table td {
-    padding: 0.35rem 0.4rem;
+    padding: 0.35rem 0.35rem;
     text-align: center;
   }
   .type{padding: 0.05rem 0.5rem; font-size: 0.60rem; font-weight: 500;}
