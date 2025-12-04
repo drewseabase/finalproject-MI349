@@ -479,7 +479,7 @@ h4{
 
 @media (max-width: 400px) {
 
-  .date{padding: 0.5rem;}
+  .date{padding: 0.8rem;}
   .timeline-header{border:1px solid red; padding: 1em;}
   .timeline-title {
     font-size: 1.5rem;
