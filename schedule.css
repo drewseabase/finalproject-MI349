@@ -476,8 +476,8 @@ h4{
 
 @media (max-width: 400px) {
 
-  .date{padding: 0.15em;}
-  .type{padding: 0.15em;}
+  .date{font-size: 0.25rem;}
+  .type{font-size: 0.25rem;}
   .timeline-title {
     font-size: 1.5rem;
   }
