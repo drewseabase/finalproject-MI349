@@ -384,6 +384,7 @@ h4{
     padding: 0.4rem 0.45rem;
     text-align: center;
   }
+  .type{padding: 0.05rem 0.5rem; font-size: 0.66rem;}
 }
 @media(max-width: 550px){
    .schedule-layout {
@@ -399,13 +400,14 @@ h4{
     overflow-x: auto;
   }
     .table {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
   }
   .table th,
   .table td {
     padding: 0.35rem 0.4rem;
     text-align: center;
   }
+  .type{padding: 0.05rem 0.5rem; font-size: 0.56rem;}
 }
 
 @media(max-width: 400px){
