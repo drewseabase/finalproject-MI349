@@ -159,7 +159,7 @@ nav a:hover{
     background-position: center;
   }
   .footer-inner {
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
   }
   .footer-nav ul {
@@ -175,4 +175,5 @@ nav a:hover{
   main {
     padding-top: 9.5rem;
   }
+  .footer-inner{flex-direction: row;}
 }
