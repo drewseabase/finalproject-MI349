@@ -275,9 +275,7 @@ h4{
 .level-5{width: 80%;}
 
 @media (max-width: 900px) {
-
-
-  .timeline-title{margin-left: 30px;}
+  .timeline-title{width: 100%;}
   .date{white-space: nowrap;}
   .layout {
     grid-template-columns: 1fr;   
@@ -331,11 +329,10 @@ h4{
 
 @media(max-width: 600px){
 
-    .schedule-layout{justify-content: stretch;}
-    .date{white-space: nowrap;}
-    sup{ font-size: 0.6em; line-height: 1; margin-left: 1px; vertical-align: text-top;}
-    .timeline-title{margin-left: 50px;}
-    .layout {
+  
+  .date{white-space: nowrap;}
+  sup{ font-size: 0.6em; line-height: 1; margin-left: 1px; vertical-align: text-top;}
+  .layout {
     grid-template-columns: 1.1fr;   
     gap: 0;      
     max-width: 400px;          
@@ -387,7 +384,8 @@ h4{
   .type{padding: 0.05rem 0.5rem; font-size: 0.60rem; font-weight: 500;}
 }
 @media(max-width: 550px){
-   .schedule-layout {
+  .timeline-title{font-size: 1rem;}
+  .schedule-layout {
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
@@ -414,10 +412,10 @@ h4{
 
 @media(max-width: 400px){
 
-    .date{white-space: nowrap; padding: 0.05rem 0.1rem; font-size: 0.55rem;}
-    sup{ font-size: 0.6em; line-height: 1; margin-left: 1px; vertical-align: text-top;}
-    .timeline-title{margin-left: 50px;}
-    .layout {
+  .date{white-space: nowrap; padding: 0.05rem 0.1rem; font-size: 0.55rem;}
+  sup{ font-size: 0.6em; line-height: 1; margin-left: 1px; vertical-align: text-top;}
+  .timeline-title{font-size: 1rem;}
+  .layout {
     grid-template-columns: 1.1fr;   
     gap: 0;      
     max-width: 400px;          
