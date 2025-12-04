@@ -175,8 +175,21 @@ nav a:hover{
   }
 }
 @media(max-width: 500px){
-  .footer-inner{border: 5px solid orange;}
-}
+  .footer-inner{
+    border: 5px solid orange;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: .5rem 1rem;
+    justify-content: center;
+  }
+  .footer-nav ul {
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+  }
+
 @media (max-width: 400px) {
   nav a {
     font-size: 0.82rem;
