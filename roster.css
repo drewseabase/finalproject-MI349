@@ -393,12 +393,12 @@ body{
   }
   .roster-header-row{ text-align: center;}
   .roster-card{
-    width: 250px;
+    width: 300px;
     flex-shrink: 0;
     display: none;     
     box-shadow: none;  
   }
-  .roster-card img{height: 350px; width: auto; box-shadow: none;}
+  .roster-card img{height: 300px; width: auto; box-shadow: none;}
   .roster-card:hover{transform: scale(1px);}
   .roster-card.active{display: flex;}
     .roster-controls{
