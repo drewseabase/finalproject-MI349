@@ -306,6 +306,27 @@ h4{
     left: -46px;                  
     top: 8rem;                  
   }
+  .schedule-layout {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  .table-wrapper {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto 3rem;
+    padding: 1rem;
+    overflow-x: auto;
+  }
+    .table {
+    font-size: 0.8rem;
+  }
+  .table th,
+  .table td {
+    padding: 0.4rem 0.45rem;
+    text-align: center;
+  }
+
 }
 
 @media(max-width: 600px){
@@ -343,7 +364,6 @@ h4{
     left: -76px;                  
     top: 8rem;                  
   }
-  .schedule-layout{max-width: 50px;}
 }
 
 @media(max-width: 400px){
