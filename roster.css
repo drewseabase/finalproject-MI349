@@ -360,7 +360,7 @@ body{
     margin-bottom: 10px;
   }
   .roster-card{
-    width: 500px;
+    width: 450px;
     flex-shrink: 0;
     display: none;     
     box-shadow: none;  
