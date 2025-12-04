@@ -234,6 +234,9 @@ body{
     grid-template-columns: 1fr;
     text-align: center;
   }
+  .roster-card{
+    padding-bottom: .8rem;
+  }
   .profile-photo{
     display: flex;
     justify-content: center;
@@ -251,7 +254,7 @@ body{
     font-size: 0.85rem;
   }
   .detail-box{
-    padding: 0.8rem 0.9rem;
+    display: none;
   }
   .roster-header-row{
     flex-direction: column;
@@ -280,7 +283,6 @@ body{
     letter-spacing: 0.08em;
     cursor: pointer;
     white-space: nowrap;
-    transform: translateX(215px);
     display: flex;
   }
   .control-btn:active{
@@ -300,8 +302,9 @@ body{
     box-shadow: none;  
   }
   .roster-card img{height: 350px; width: auto; box-shadow: none;}
-  .roster-card:hover{transform: none; box-shadow: 0 12px 30px rgba(0,0,0,.4);}
+  .roster-card:hover{transform: none; box-shadow: none;}
   .roster-card.active{display: flex;}
+ 
 }
 
 
@@ -317,7 +320,7 @@ body{
   .profile-info{ text-align: left;}
   .profile-meta{font-size: 0.75rem;}
   .profile-bio{font-size: 0.85rem;}
-  .detail-box{padding: 0.8rem 0.9rem;}
+  .detail-box{display: none;}
   .roster-header-row{
     flex-direction: column;
     align-items: flex-start;
@@ -345,7 +348,6 @@ body{
     letter-spacing: 0.08em;
     cursor: pointer;
     white-space: nowrap;
-    transform: translateX(190px);
   }
   .control-btn:active{
     transform: translateY(1px);
@@ -364,14 +366,14 @@ body{
     box-shadow: none;  
   }
   .roster-card img{height: 350px; width: auto; box-shadow: none;}
-  .roster-card:hover{transform: none; box-shadow: 0 12px 30px rgba(0,0,0,.4);}
+  .roster-card:hover{transform: none; box-shadow: none;}
   .roster-card.active{display: flex;}     
   }
 
 @media (max-width: 400px){
   .profile-meta{font-size: 0.65rem;}
   .profile-bio{font-size: 0.75rem;}
-  .detail-box{padding: 0.6rem, 0.7rem;}
+  .detail-box{display: none;}
    .roster-grid{
     display: flex;
     overflow: hidden;
@@ -404,7 +406,6 @@ body{
     letter-spacing: 0.08em;
     cursor: pointer;
     white-space: nowrap;
-    transform: translateX(100px);
   }
   .control-btn:active{
     transform: translateY(1px);
