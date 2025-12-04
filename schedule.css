@@ -457,7 +457,6 @@ h4{
     margin: 0 auto 2.5rem;
     padding: 0.4rem;
     overflow-x: auto;
-    height: 300px;
   }
     .table {
     font-size: 0.45rem;
@@ -469,6 +468,6 @@ h4{
     padding: 0.25rem 0.1rem;
     text-align: center;
   }
-  .type{padding: 0.025rem 0.1rem; font-size: 0.50rem; font-weight: 400;}
+  .type{padding: 0.025rem 0.08rem; font-size: 0.35rem; font-weight: 400;}
 }
 
