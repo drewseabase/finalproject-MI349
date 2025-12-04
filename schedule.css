@@ -456,7 +456,8 @@ h4{
     width: 100%;
     margin: 0 auto 2.5rem;
     padding: 0.4rem;
-    overflow-x: auto;
+    overflow-x: none;
+    height: auto;
   }
     .table {
     font-size: 0.45rem;
