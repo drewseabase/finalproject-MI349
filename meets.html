@@ -6,7 +6,6 @@
     <title>Michigan State Cross Country Schedule</title>
     <link rel="stylesheet" href="schedule.css">
     <link rel="stylesheet" href="global.css">
- 
 </head>
 <body>
 <script src="schedule.js" defer></script>
@@ -128,7 +127,11 @@
                                     Normally treated like a workout. Something to get the legs moving at a quicker pace.
                                 </span>
                             </div>
-                        </div> 
+                        </div>
+                        <!-- NEW BUTTON -->
+                        <button class="course-profile-btn" type="button">
+                            View Course Profile
+                        </button>
                     </div>
                 </div>
 
@@ -179,7 +182,11 @@
                                     while in the early stages of the race.
                                 </span>
                             </div>
-                        </div> 
+                        </div>
+                        <!-- NEW BUTTON -->
+                        <button class="course-profile-btn" type="button">
+                            View Course Profile
+                        </button>
                     </div>
                 </div>
 
@@ -201,6 +208,7 @@
                 </div>
             </div>
         </li>
+
         <!-- Gans Creek -->
          <li class="item">
             <div class="layout">
@@ -228,7 +236,11 @@
                                     Compete. Run our race plan. Stay patient and move through the field.
                                 </span>
                             </div>
-                        </div> 
+                        </div>
+                        <!-- NEW BUTTON -->
+                        <button class="course-profile-btn" type="button">
+                            View Course Profile
+                        </button>
                     </div>
                 </div>
 
@@ -250,6 +262,7 @@
                 </div>
             </div>
         </li>
+
         <!--NuttyCombe-->
         <li class="item">
             <div class="layout">
@@ -277,7 +290,11 @@
                                     Showcase how strong and deep our team truly is.
                                 </span>
                             </div>
-                        </div> 
+                        </div>
+                        <!-- NEW BUTTON -->
+                        <button class="course-profile-btn" type="button">
+                            View Course Profile
+                        </button>
                     </div>
                 </div>
 
@@ -299,6 +316,7 @@
                 </div>
             </div>
         </li>
+
         <!--Eastern Michigan -->
         <li class="item">
             <div class="layout">
@@ -325,7 +343,11 @@
                                     Treated like a duel meet against University of Michigan
                                 </span>
                             </div>
-                        </div> 
+                        </div>
+                        <!-- NEW BUTTON -->
+                        <button class="course-profile-btn" type="button">
+                            View Course Profile
+                        </button>
                     </div>
                 </div>
 
@@ -347,6 +369,7 @@
                 </div>
             </div>
         </li>
+
         <!--Big Tens -->
         <li class="item">
             <div class="layout">
@@ -361,7 +384,6 @@
                         <p class="meet-meta">Conference Championships · East Lansing, MI</p>
                         <p class="description">
                             Conference championships. The pinnacle of the season starts with this competitve masterclass of racing.
-
                         </p>
                         <div class="extra">
                             <div class="field">
@@ -374,7 +396,11 @@
                                     Stay patient, run with the right group of people, perform late
                                 </span>
                             </div>
-                        </div> 
+                        </div>
+                        <!-- NEW BUTTON -->
+                        <button class="course-profile-btn" type="button">
+                            View Course Profile
+                        </button>
                     </div>
                 </div>
 
@@ -396,6 +422,7 @@
                 </div>
             </div>
         </li>
+
         <!--Regionals-->
         <li class="item">
             <div class="layout">
@@ -422,7 +449,11 @@
                                     Work together and don't over exert. Just get the job done and prepare for Nationals.
                                 </span>
                             </div>
-                        </div> 
+                        </div>
+                        <!-- NEW BUTTON -->
+                        <button class="course-profile-btn" type="button">
+                            View Course Profile
+                        </button>
                     </div>
                 </div>
 
@@ -444,6 +475,7 @@
                 </div>
             </div>
         </li>
+
         <!--NCAA's-->
         <li class="item">
             <div class="layout">
@@ -470,7 +502,11 @@
                                     Be as competitive as possible.
                                 </span>
                             </div>
-                        </div> 
+                        </div>
+                        <!-- NEW BUTTON -->
+                        <button class="course-profile-btn" type="button">
+                            View Course Profile
+                        </button>
                     </div>
                 </div>
 
@@ -494,6 +530,21 @@
         </li>
     </ol>
 </div>
+
+<!-- NEW: bottom sheet modal for course profiles -->
+<div class="course-modal" aria-hidden="true">
+  <div class="course-modal-backdrop"></div>
+
+  <div class="course-modal-panel" role="dialog" aria-modal="true">
+    <button class="course-modal-close" type="button" aria-label="Close course profile">
+      ✕
+    </button>
+    <div class="course-modal-body">
+      <!-- JS will inject .meetprofile content here -->
+    </div>
+  </div>
+</div>
+
 </main>
 
     <footer class="site-footer">
@@ -511,13 +562,6 @@
                 <h3>Michigan State Cross Country</h3>
                 <p class="footer-season"> 2025-2026 season</p>
                 <p class="footer-copy">© 2025 Spartans XC (Unofficial Site)</p>
-            </div>
-            <div class="footer-contact">
-                <p class="footer-social">
-                    <a href="#" aria-label="Team Instagram"> Instagram</a> ·
-                    <a href="#" aria-label="Team Twitter">Twitter</a> ·
-                    <a href="#" aria-label="Strava club">Strava</a>
-                </p>
             </div>
             <div class="footer-location">
                 <p> Based in East Lansing, Michigan</p>
