@@ -165,7 +165,7 @@ nav a:hover{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 1rem 1.5rem;
+    gap: .5rem 1rem;
     justify-content: center;
   }
   .footer-nav ul {
