@@ -379,7 +379,7 @@ body{
     margin-bottom: 10px;
   }
   .roster-card{
-    width: 500px;
+    width: 400px;
     flex-shrink: 0;
     display: none;     
     box-shadow: none;  
