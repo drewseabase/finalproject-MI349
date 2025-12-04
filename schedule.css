@@ -219,7 +219,7 @@ body{
     gap: 0.6rem;
 }
 
-.field{font-size: 0.86rem; color: #d6e5da; display: flex; flex-direction: column; flex-wrap: wrap;}
+.field{font-size: 0.86rem; color: #d6e5da; display: flex; flex-direction: column; flex-wrap: wrap; margin-bottom: 5px;}
 .field-label{font-weight: 600; margin-right: 0.2rem;}
 
 .meetprofile{
@@ -280,8 +280,52 @@ h4{
 .level-4{width: 65%;}
 .level-5{width: 80%;}
 
-@media (max-width: 900px) {
-  body{border: 10px solid black;}
+.course-profile-btn{
+  display: none;
+}
+.course-modal{
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 999;
+}
+.course-modal.is-open{display: block;}
+.course-modal-backdrop{
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(3px);
+}
+.course-modal-panel{
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 100%);
+  width: 100%;
+  max-width: 700px;
+  background: linear-gradient(130deg, rgba(35,73,57,0.98), rgba(4,13,9,0.98));
+  border-radius: 18px 18px 0 0;
+  border: 1.5px solid #335b45;
+  box-shadow: 0 -10px 30px rgba(0,0,0,0.6);
+  padding: 1.1rem 1rem 1.4rem;
+  max-height: 80vh;
+  overflow-y: auto;
+  transition: transform 0.3s ease-out;
+}
+.course-modal.is-open .course-modal-panel{transform: translate(-50%, 0);}
+.course-modal-close{
+  position: absolute;
+  top: 0.6rem;
+  right: 0.8rem;
+  border: none;
+  background: transparent;
+  color: #dce6dd;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.course-modal-body{margin-top: 1.4rem;}
+
+@media (max-width: 750px) {
   .timeline-title{width: 100%;}
   .date{white-space: nowrap;}
   .layout {
@@ -297,25 +341,13 @@ h4{
     padding-left: 40px;  
     margin: 0 auto;        
   }
-  .meets-list::before {
-    left: 0;                   
-    top: 0;
-    bottom: 0;                   
-  }
+  .meets-list::before { display: none;}
   .item {
     padding-left: 0;              
     text-align: center;
     margin-bottom: 3rem;
   }
-  .timeline-marker {
-    left: -46px;                  
-    top: 8rem;                  
-  }
-  .schedule-layout {
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-  }
+  .timeline-marker {display: none;}
   .table-wrapper {
     max-width: 100%;
     width: 100%;
@@ -331,6 +363,32 @@ h4{
     padding: 0.4rem 0.45rem;
     text-align: center;
   }
+  .layout{
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .meetprofile{display: none;}
+  .course-profile-btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 0.9rem;
+    margin-top: 1rem;
+    border-radius: 999px;
+    border: 1px solid #4af28a;
+    background: transparent;
+    color: #dce6dd;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    gap: 0.25rem;
+  }
+
+  .course-profile-btn:hover{background: rgba(74,242,138,0.08);}
+  h4{color: #dce6dd; text-align: center;}
+  li{list-style: none; color: #dce6dd;line-height: 1.8;}
+  p{color: #dce6dd; text-align: center;}
 
 }
 
