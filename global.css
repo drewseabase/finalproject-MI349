@@ -161,6 +161,7 @@ nav a:hover{
     background-position: center;
   }
   .footer-inner {
+    gap: 1.25rem 2rem;
     flex-direction: row;
     align-items: flex-start;
   }
@@ -177,5 +178,5 @@ nav a:hover{
   main {
     padding-top: 9.5rem;
   }
-  .footer-inner{flex-direction: row; align-items: flex-start;}
+  .footer-inner{ gap:1.25rem 2rem; flex-direction: row; align-items: flex-start;}
 }
