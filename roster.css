@@ -296,15 +296,17 @@ body{
     position: relative;
     justify-content: center;
     margin-bottom: 0.75rem;
+    padding: 5px 5px;
   }
   .roster-card{
     width: 500px;
     flex-shrink: 0;
     display: none;     
     box-shadow: none;  
+    margin-top: 5px;
   }
   .roster-card img{height: 350px; width: auto; box-shadow: none;}
-  .roster-card:hover{transform: none; box-shadow: none;}
+  .roster-card:hover{transform: scale(1.02); box-shadow: none;}
   .roster-card.active{display: flex;}
  
 }
@@ -361,15 +363,17 @@ body{
     overflow: hidden;
     position: relative;
     margin-bottom: 10px;
+    padding: 5px 5px ;
   }
   .roster-card{
     width: 450px;
     flex-shrink: 0;
     display: none;     
-    box-shadow: none;  
+    box-shadow: none; 
+    margin-top: 5px; 
   }
   .roster-card img{height: 350px; width: auto; box-shadow: none;}
-  .roster-card:hover{transform: none; box-shadow: none;}
+  .roster-card:hover{transform: scale(1.01); box-shadow: none;}
   .roster-card.active{display: flex;}     
   }
 
@@ -391,7 +395,7 @@ body{
     box-shadow: none;  
   }
   .roster-card img{height: 350px; width: auto; box-shadow: none;}
-  .roster-card:hover{transform: none; box-shadow: 0 12px 30px rgba(0,0,0,.4);}
+  .roster-card:hover{transform: scale(1px);}
   .roster-card.active{display: flex;}
     .roster-controls{
     display: flex;
