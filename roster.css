@@ -155,9 +155,9 @@ body{
 
 .roster-card img{
   width: 100%;
+  height: 240px;
   display: block;
   object-fit: cover;
-  height: 260px;
 }
 
 .roster-card:hover{
@@ -280,6 +280,7 @@ body{
     letter-spacing: 0.08em;
     cursor: pointer;
     white-space: nowrap;
+    transform: translateX(40px);
   }
   .control-btn:active{
     transform: translateY(1px);
@@ -288,20 +289,22 @@ body{
     display: flex;
     overflow: hidden;
     position: relative;
+    justify-content: center;
+    margin-bottom: 10px;
   }
   .roster-card{
-    min-width: 100%;
+    width: 500px;
     flex-shrink: 0;
-    display: none;       
+    display: none;     
+    box-shadow: none;  
   }
-  .roster-card.active{
-    display: flex;      
-  }
+  .roster-card img{height: 350px; width: auto; box-shadow: none;}
+  .roster-card:hover{transform: none; box-shadow: 0 12px 30px rgba(0,0,0,.4);}
+  .roster-card.active{display: flex;}
 }
 
 
 @media (max-width: 600px){
-  body{border: 5px solid blue;}
   .roster-page{
     padding-top: 4rem;
   }
@@ -341,27 +344,47 @@ body{
     letter-spacing: 0.08em;
     cursor: pointer;
     white-space: nowrap;
+    transform: translateX(40px);
   }
   .control-btn:active{
     transform: translateY(1px);
   }
   .roster-grid{
     display: flex;
+    justify-content: center;
     overflow: hidden;
     position: relative;
+    margin-bottom: 10px;
   }
   .roster-card{
-    min-width: 100%;
+    width: 500px;
     flex-shrink: 0;
-    display: none;        
+    display: none;     
+    box-shadow: none;  
   }
-  .roster-card.active{
-    display: flex;        
+  .roster-card img{height: 350px; width: auto; box-shadow: none;}
+  .roster-card:hover{transform: none; box-shadow: 0 12px 30px rgba(0,0,0,.4);}
+  .roster-card.active{display: flex;}     
   }
-}
 
 @media (max-width: 400px){
   .profile-meta{font-size: 0.65rem;}
   .profile-bio{font-size: 0.75rem;}
   .detail-box{padding: 0.6rem, 0.7rem;}
+   .roster-grid{
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .roster-card{
+    width: 200px;
+    flex-shrink: 0;
+    display: none;     
+    box-shadow: none;  
+  }
+  .roster-card img{height: 350px; width: auto; box-shadow: none;}
+  .roster-card:hover{transform: none; box-shadow: 0 12px 30px rgba(0,0,0,.4);}
+  .roster-card.active{display: flex;}
 }
