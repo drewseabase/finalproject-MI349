@@ -381,6 +381,47 @@ body{
 
   @media(max-width: 550px){
     body{background: blue;}
+    .profile-meta{font-size: 0.65rem;}
+  .profile-bio{font-size: 0.75rem;}
+  .detail-box{display: none;}
+   .roster-grid{
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .roster-header-row{ text-align: center;}
+  .roster-card{
+    width: 250px;
+    flex-shrink: 0;
+    display: none;     
+    box-shadow: none;  
+  }
+  .roster-card img{height: 350px; width: auto; box-shadow: none;}
+  .roster-card:hover{transform: scale(1px);}
+  .roster-card.active{display: flex;}
+    .roster-controls{
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+  .control-btn{
+    padding: 0.5rem 0.7rem;
+    border-radius: 999px;
+    border: 1px solid #3b7156;
+    background: rgba(4,13,9,0.95);
+    color: #e4f0e8;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .control-btn:active{
+    transform: translateY(1px);
+  }
   }
 
 @media (max-width: 400px){
