@@ -66,7 +66,7 @@ nav a:hover{
     flex-direction: row;
     flex-wrap: wrap;
     gap: 1.5rem 3rem;
-    justify-content: flex-start;
+    justify-content: center;
 }
 .footer-brand h3{
     margin: 0 0 0.25rem 0;
@@ -161,9 +161,11 @@ nav a:hover{
     background-position: center;
   }
   .footer-inner {
-    gap: 1.25rem 2rem;
+    max-width: 100%;
+    display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    gap: 1.5rem 2rem;
+    justify-content: center;
   }
   .footer-nav ul {
     flex-wrap: wrap;
@@ -178,5 +180,11 @@ nav a:hover{
   main {
     padding-top: 9.5rem;
   }
-  .footer-inner{ gap:1.25rem 2rem; flex-direction: row; align-items: flex-start;}
+  .footer-inner{ 
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem 1.5rem;
+    justify-content: center;
+  }
 }
