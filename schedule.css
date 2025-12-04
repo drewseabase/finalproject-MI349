@@ -385,6 +385,28 @@ h4{
     text-align: center;
   }
 }
+@media(max-width: 550px){
+   .schedule-layout {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .table-wrapper {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto 3rem;
+    padding: 0.8rem;
+    overflow-x: auto;
+  }
+    .table {
+    font-size: 0.6rem;
+  }
+  .table th,
+  .table td {
+    padding: 0.35rem 0.4rem;
+    text-align: center;
+  }
+}
 
 @media(max-width: 400px){
 
