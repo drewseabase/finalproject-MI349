@@ -380,8 +380,7 @@ body{
   }
 
   @media(max-width: 550px){
-    body{background: blue;}
-    .profile-meta{font-size: 0.65rem;}
+  .profile-meta{font-size: 0.65rem;}
   .profile-bio{font-size: 0.75rem;}
   .detail-box{display: none;}
    .roster-grid{
