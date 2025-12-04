@@ -228,7 +228,7 @@ body{
   box-shadow: 0 14px 32px rgba(0,0,0,.65);
 }
 .roster-controls{display: none;}
-
+/*get button directly centered w card */
 @media (max-width: 900px){
   .roster-profile{
     grid-template-columns: 1fr;
