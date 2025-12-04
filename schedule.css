@@ -476,22 +476,21 @@ h4{
 
 @media (max-width: 400px) {
 
+  .date{padding: 0.15em;}
+  .type{padding: 0.15em;}
   .timeline-title {
     font-size: 1.5rem;
   }
-
   .layout {
     grid-template-columns: 1fr;  
     gap: 0;
     max-width: 100%;            
   }
-
   .meets-list {
     transform: none;
     padding-left: 0;            
     margin: 0 auto;
   }
-
   .item {
     text-align: center;
     margin-bottom: 1.25rem;
