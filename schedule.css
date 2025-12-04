@@ -344,3 +344,40 @@ h4{
   }
 }
 
+@media(max-width: 400px){
+  
+   .schedule-layout{justify-content: stretch;}
+    .date{white-space: nowrap;}
+    sup{ font-size: 0.6em; line-height: 1; margin-left: 1px; vertical-align: text-top;}
+    .timeline-title{margin-left: 50px;}
+    .layout {
+    grid-template-columns: 1.1fr;   
+    gap: 0;      
+    max-width: 400px;          
+  }
+  .meetprofile {
+    max-width: 100%;              
+    margin-bottom: 10rem;          
+  }
+  .meets-list {
+    transform: none;              
+    padding-left: 80px;     
+    margin: 0 auto;     
+  }
+  .meets-list::before {
+    left: 10px;                   
+    top: 0;
+    bottom: 0;                   
+  }
+  .item {
+    padding-left: 0;              
+    text-align: center;
+    margin-bottom: 1.5rem;
+    
+  }
+  .timeline-marker {
+    left: -76px;                  
+    top: 8rem;                  
+  }
+}
+
