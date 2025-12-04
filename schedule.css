@@ -414,7 +414,7 @@ h4{
 
 @media(max-width: 400px){
 
-    .date{white-space: nowrap; padding: 0.025rem 0.08rem; font-size: 0.35rem; ;}
+    .date{white-space: nowrap; padding: 0.05rem 0.1rem; font-size: 0.55rem;}
     sup{ font-size: 0.6em; line-height: 1; margin-left: 1px; vertical-align: text-top;}
     .timeline-title{margin-left: 50px;}
     .layout {
