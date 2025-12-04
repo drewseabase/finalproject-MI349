@@ -135,6 +135,7 @@ nav a:hover{
   }
   .footer-inner {
     gap: 1.25rem 2rem;
+    flex-direction: row;
   }
 }
 @media (max-width: 600px) {
