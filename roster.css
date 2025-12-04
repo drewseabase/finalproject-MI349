@@ -227,8 +227,10 @@ body{
   transform: translateY(-2px) scale(1.02);
   box-shadow: 0 14px 32px rgba(0,0,0,.65);
 }
+.roster-controls{display: none;}
 
 @media (max-width: 900px){
+  body{border: 5px solid red;}
   .roster-profile{
     grid-template-columns: 1fr;
     text-align: center;
@@ -255,9 +257,37 @@ body{
   .detail-box{
     padding: 0.8rem 0.9rem;
   }
+  .roster-controls{
+    display: flex;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+  .control-btn{
+    flex: 1;
+    padding: 0.45rem 0.75rem;
+    border-radius: 999px;
+    border: 1px solid #3b7156;
+    background: rgba(4,13,9,0.95);
+    color: #e4f0e8;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+  }
+  .control-btn:active{transform: translateY(1px);}
+  .roster-grid{
+    display: flex;
+    overflow: hidden;
+    position: relative;
+  }
+  .roster-card{min-width: 100%; flex-shrink: 0; display: none;}
+  .roster-card.active{display: flex;}
 }
 
 @media (max-width: 600px){
+  body{border: 5px solid blue;}
   .roster-page{
     padding-top: 4rem;
   }
@@ -266,6 +296,33 @@ body{
     width: 220px;
     height: 150px;
   }
+  .roster-controls{
+    display: flex;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+  .control-btn{
+    flex: 1;
+    padding: 0.45rem 0.75rem;
+    border-radius: 999px;
+    border: 1px solid #3b7156;
+    background: rgba(4,13,9,0.95);
+    color: #e4f0e8;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+  }
+  .control-btn:active{transform: translateY(1px);}
+  .roster-grid{
+    display: flex;
+    overflow: hidden;
+    position: relative;
+  }
+  .roster-card{min-width: 100%; flex-shrink: 0; display: none;}
+  .roster-card.active{display: flex;}
 }
 
 @media (max-width: 400px){
