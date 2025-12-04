@@ -474,38 +474,35 @@ h4{
   
 }
 
-@media(max-width: 400px){
+@media (max-width: 400px) {
 
-  .date{white-space: nowrap; padding: 0.05rem 0.1rem; font-size: 0.55rem;}
-  sup{ font-size: 0.6em; line-height: 1; margin-left: 1px; vertical-align: text-top;}
-  .timeline-title{font-size: 1.5rem;}
+  .timeline-title {
+    font-size: 1.5rem;
+  }
+
   .layout {
-    grid-template-columns: 1.1fr;   
-    gap: 0;      
-    max-width: 400px;          
+    grid-template-columns: 1fr;  
+    gap: 0;
+    max-width: 100%;            
   }
-  .meetprofile {
-    max-width: 100%;              
-    margin-bottom: 10rem;          
-  }
+
   .meets-list {
-    transform: none;              
-    padding-left: 80px;     
-    margin: 0 auto;     
+    transform: none;
+    padding-left: 0;            
+    margin: 0 auto;
   }
-  .meets-list::before {
-    left: 10px;                   
-    top: 0;
-    bottom: 0;                   
-  }
-  .item {    
+
+  .item {
     text-align: center;
     margin-bottom: 1.25rem;
-    margin-right: 50px;
+    margin-right: 0;             
   }
   .timeline-marker {
-    left: -76px;                  
-    top: 8rem;                  
+    display: none;               
+  }
+  .timeline-content,
+  .meetprofile {
+    min-height: auto;            
   }
   .schedule-layout {
     flex-direction: column;
@@ -519,7 +516,7 @@ h4{
     padding: 0.4rem;
     overflow-x: auto;
   }
-    .table {
+  .table {
     font-size: 0.55rem;
     font-weight: 500;
     flex-wrap: nowrap;
@@ -529,6 +526,16 @@ h4{
     padding: 0.25rem 0.1rem 0.45rem 0.1rem;
     text-align: center;
   }
-  .type{padding: 0.025rem 0.08rem; font-size: 0.35rem; font-weight: 400;}
+  .date {
+    white-space: nowrap;
+    padding: 0.05rem 0.1rem;
+    font-size: 0.55rem;
+  }
+  .type {
+    padding: 0.025rem 0.08rem;
+    font-size: 0.35rem;
+    font-weight: 400;
+  }
 }
+
 
