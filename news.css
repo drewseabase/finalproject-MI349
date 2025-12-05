@@ -70,7 +70,7 @@ h2{font-size: 1.3rem; margin: 0 auto 7px; text-transform: uppercase;}
 .race-grid{
     display: flex;
     flex-wrap: wrap;
-    gap: 1.3rem;
+    gap: 1.5rem;
     justify-content: center;
 }
 .race-card{
