@@ -55,6 +55,7 @@ body{
     margin-bottom: 1.5rem;
     flex-wrap: wrap;
 }
+.missing-header{display: none;}
 h2{font-size: 1.3rem; margin: 0 auto 7px; text-transform: uppercase;}
 .tagline{margin: 0; font-size: 0.8rem; max-width: 320px;}
 .pill{
