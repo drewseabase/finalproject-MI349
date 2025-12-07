@@ -192,7 +192,7 @@ li{margin-bottom: 5px;}
     .news-section{padding: 1.05rem 1.05rem 1rem;}
     .section-header{flex-direction: row; align-items: flex-start; gap: 0.5rem;}
     h2{margin: 0 0 4px 0; text-align: left;}
-    .tagline{font-size: 0.78rem;}
+    .tagline{font-size: 0.78rem; margin-bottom: 5px;}
     .meta{font-size: 0.78rem;}
     .summary{font-size: 0.88rem;}
     .details{font-size: 0.78rem;}
@@ -261,7 +261,7 @@ li{margin-bottom: 5px;}
     .subtitle{font-size: 0.9rem; margin-bottom: 2.6rem;}
     .section-header{gap: 0.45rem;}
     h2{font-size: 1.2rem; margin-bottom: 4px;}
-    .tagline{font-size: 0.76rem; max-width: 100%;}
+    .tagline{font-size: 0.76rem; max-width: 100%; margin-bottom: 5px;}
     .race-grid{min-height: 280px;}
     .race-grid.training-weeks{min-height: 210px;}
     .race-card{max-width: 400px; padding: 1.1rem;}
@@ -284,7 +284,7 @@ li{margin-bottom: 5px;}
     .subtitle{font-size: 0.88rem; margin-bottom: 2.3rem;}
     .news-section{padding: 0.9rem 0.75rem 0.9rem; border-radius: 14px; margin-bottom: 2.6rem;}
     h2{font-size: 1.1rem;}
-    .tagline{font-size: 0.74rem;}
+    .tagline{font-size: 0.74rem; margin-bottom: 5px;}
     .race-grid{min-height: 330px;}
     .race-grid.training-weeks{min-height: 220px;}
     .race-card{max-width: 360px; padding: 0.95rem;}
