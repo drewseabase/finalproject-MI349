@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
         } else {
-          entry.target.classList.remove("visible"); 
+          entry.target.classList.remove("visible");
         }
       });
     },
@@ -40,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function go(delta) {
+      if (window.innerWidth > breakpoint) return;
       if (!cards.length) return;
       const nextIndex = (currentIndex + delta + cards.length) % cards.length;
       const currentCard = cards[currentIndex];
@@ -53,11 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function handleResize() {
       if (window.innerWidth <= breakpoint) {
-        cards.forEach((card, i) => {
-          card.classList.toggle("active", i === 0);
-          card.classList.remove("leaving");
-        });
-        currentIndex = 0;
+        applyActive(0);
       } else {
         cards.forEach((card) => {
           card.classList.remove("active");
@@ -77,3 +74,4 @@ document.addEventListener("DOMContentLoaded", function () {
   initSlider(".spots-grid", ".spot-card", "prev-spots", "next-spots", 650);
   initSlider(".values-grid", ".value-card", "prev-values", "next-values", 650);
 });
+
