@@ -296,7 +296,6 @@ p{
         width: min(300px, 60vw);  
         max-width: 100%;
         height: auto;
-        margin-top: -120px;
         align-self: center;
         padding: 15px;
     }

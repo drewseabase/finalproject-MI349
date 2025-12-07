@@ -26,11 +26,11 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(() => {
       currentIndex = (currentIndex + 1) % rosterImages.length;
       rosterEl.src = rosterImages[currentIndex];
-    }, 600); // after fade-out finishes, while opacity is 0
+    }, 600); 
 
     setTimeout(() => {
       rosterEl.classList.remove("is-fading");
-    }, 600 + 1000); // keep it dark for 1.5s, then fade back in
+    }, 600 + 1000); 
   }
 
   setInterval(showNextRosterImage, 7000);
