@@ -374,6 +374,7 @@ h2{font-size: clamp(2rem, 3vw, 2.5rem); margin: 0; color: #dce6dd;}
     .history-section:nth-of-type(2) .tradition-copy{font-size:0.85rem;}
     .history-section:nth-of-type(2) .identity-item{font-size:0.8rem;}
     .history-section:nth-of-type(2) .identity-label{font-size:0.75rem;}
+    .spot-card{ width:100%; max-width:420px;}
     .spots-grid .spot-card:last-child{
     grid-column:1 / -1;
     justify-self:center;
@@ -404,6 +405,34 @@ h2{font-size: clamp(2rem, 3vw, 2.5rem); margin: 0; color: #dce6dd;}
  .history-culture .identity-list{align-items:stretch;}
  .history-culture .identity-item{width:100%;display:flex;flex-direction:column;align-items:flex-start;text-align:left;font-size:.78rem;padding:.45rem .55rem;gap:.4rem;}
  .history-culture .identity-label{font-size:.72rem;letter-spacing:.1em;}
+   .values-grid{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:stretch;
+    min-height:260px;
+    overflow:hidden;
+  }
+  .value-card{
+    position:absolute;
+    left:50%;
+    top:0;
+    width:100%;
+    max-width:420px;
+    transform:translateX(-50%) translateY(10px);
+    opacity:0;
+    pointer-events:none;
+    box-shadow:none;
+    transition:opacity 220ms ease,transform 220ms ease;
+  }
+  .value-card.active{
+    opacity:1;
+    pointer-events:auto;
+    transform:translateX(-50%) translateY(0);
+    z-index:1;}
+  .value-card.leaving{ opacity:0; pointer-events:none; }
+  .value-card:hover{ transform:translateX(-50%) translateY(0); box-shadow:none; }
+
 }
 @media(max-width:550px){
  .champ-grid{min-height:430px;}
@@ -419,6 +448,10 @@ h2{font-size: clamp(2rem, 3vw, 2.5rem); margin: 0; color: #dce6dd;}
  .history-section:nth-of-type(2) .tradition-copy{font-size:.8rem;}
  .history-section:nth-of-type(2) .identity-item{font-size:.56rem;padding:.1rem .2rem;}
  .history-section:nth-of-type(2) .identity-label{font-size:.5rem;}
+ .values-grid{min-height: 220px;}
+ .values-card{max-width: 320px; padding: 0.7rem 0.8rem; font-size: 0.78rem;}
+ .value-label{font-size: 0.66rem; letter-spacing: 0.11em;}
+ .value-title{font-size: 0.86rem;}
 }
 
 @media(max-width:500px){
@@ -432,6 +465,10 @@ h2{font-size: clamp(2rem, 3vw, 2.5rem); margin: 0; color: #dce6dd;}
   .champ-body{padding:0.7rem 0.8rem 0.9rem;font-size:0.82rem;}
   .champ-title{font-size:0.9rem;margin-bottom:0.2rem;}
   .champ-body .hero-meta{font-size:0.76rem;}
+   .values-grid{min-height:220px;}
+  .value-card{ max-width:300px; padding:0.65rem 0.75rem; font-size:0.76rem;}
+  .value-label{ font-size:0.62rem; letter-spacing:0.1em;}
+  .value-title{font-size:0.84rem;}
 }
  @media(max-width:400px){
   .history-section{padding:1.1rem 0.85rem 1.4rem;}
@@ -454,6 +491,10 @@ h2{font-size: clamp(2rem, 3vw, 2.5rem); margin: 0; color: #dce6dd;}
   .history-section:nth-of-type(2) .tradition-copy{font-size:0.25rem;}
   .history-section:nth-of-type(2) .identity-item{font-size:0.45rem; padding:0.2rem 0.1rem;}
   .history-section:nth-of-type(2) .identity-label{font-size:0.5rem; letter-spacing:0.09em;}
+  .values-grid{min-height:230px;}
+  .value-card{ max-width:280px; padding:0.6rem 0.7rem; font-size:0.74rem;}
+  .value-label{font-size:0.6rem; letter-spacing:0.1em;}
+  .value-title{font-size:0.82rem;}
 }
 
 

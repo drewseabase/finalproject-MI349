@@ -71,7 +71,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   initSlider(".champ-grid", ".champ-card", "prev-champs", "next-champs", 650);
-  initSlider(".spots-grid", ".spot-card", "prev-spots", "next-spots", 650);
   initSlider(".values-grid", ".value-card", "prev-values", "next-values", 650);
 });
 
