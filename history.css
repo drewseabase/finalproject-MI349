@@ -473,6 +473,15 @@ h2{font-size: clamp(2rem, 3vw, 2.5rem); margin: 0; color: #dce6dd;}
 
 }
 @media(max-width:550px){
+ .hero-history{margin-bottom: 2.8rem;}
+ .hero-history .content{padding: 1.3rem 1.1rem; gap: 0.6rem;}
+ .hero-history .hero-eyebrow{font-size: 0.55rem; letter-spacing: 0.18em;}
+ .hero-history h2{font-size: 1.35rem; line-height: 1.15;}
+ .hero-history .hero-text{font-size: 0.82rem; line-height: 1.45;}
+ .hero-history .hero-meta{font-size: 0.65rem;gap: 0.6rem;}
+ .hero-history .badge{padding: 0.22rem 0.6rem;}
+ .history-image{max-height: 500px;} 
+ .overlay-label{font-size: 0.6rem; padding: 0.22rem 0.6rem;}
  .champ-grid{min-height:430px;}
  .champ-card{max-width:380px;padding:1rem;}
  .champ-img{height:150px;}
@@ -493,6 +502,15 @@ h2{font-size: clamp(2rem, 3vw, 2.5rem); margin: 0; color: #dce6dd;}
 }
 
 @media(max-width:500px){
+   .hero-history{margin-bottom: 2.6rem;}
+  .hero-history .content{padding: 1.2rem 1rem; gap: 0.5rem;}
+  .hero-history .hero-eyebrow{font-size: 0.45rem; letter-spacing: 0.18em;}
+  .hero-history h2{font-size: 1.25rem; line-height: 1.15;}
+  .hero-history .hero-text{font-size: 0.78rem; line-height: 1.35;}
+  .hero-history .hero-meta{font-size: 0.6rem;gap: 0.6rem;}
+  .hero-history .badge{padding: 0.20rem 0.55rem;}
+  .history-image{max-height: 600px;} 
+  .overlay-label{font-size: 0.55rem; padding: 0.20rem 0.55rem;}
   .history-section .content{text-align:center;padding-bottom:0.7rem;}
   .history-section .content .hero-eyebrow{font-size:0.62rem;letter-spacing:0.16em;margin-bottom:0.08rem;}
   .history-section .content h2{font-size:1.35rem;line-height:1.15;margin-bottom:0.2rem;}
