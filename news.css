@@ -272,7 +272,7 @@ li{margin-bottom: 5px;}
     .summary{font-size: 0.86rem;}
     .details{font-size: 0.76rems; max-width: 230px;}
     .prog-row{font-size: 0.8rem; padding: 0.5rem 0.7rem;}
-    .prog-header{font-size: 0.75rem;}
+    .prog-header{font-size: 0.55rem;}
     .control-btn{font-size: 0.76rem; padding: 0.45rem 0.7rem;}
 }
 @media(max-width: 400px){
