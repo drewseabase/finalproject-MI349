@@ -254,7 +254,6 @@ li{margin-bottom: 5px;}
     .control-btn:active{transform: translateY(1px);}
 }
 @media(max-width: 550px){
-    body{border: 10px solid brown;}
     .news-page{padding: 2.8rem 0.7rem 2.4rem;}
     .news-section{padding: 1rem 0.9rem 0.95rem; margin-bottom: 3rem; border-radius: 16px;}
     .news-title h1{font-size: 2rem;}
@@ -278,7 +277,6 @@ li{margin-bottom: 5px;}
     .event{font-size: .60rem;}
 }
 @media(max-width: 400px){
-    body{border: 10px solid peru;}
     .news-page{padding: 2.4rem 0.6rem 2.1rem;}
     .news-title h1{font-size: 1.8rem;}
     .subtitle{font-size: 0.88rem; margin-bottom: 2.3rem;}
