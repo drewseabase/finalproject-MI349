@@ -427,7 +427,11 @@ h2{font-size: clamp(2rem, 3vw, 2.5rem); margin: 0; color: #dce6dd;}
     .control-btn{padding: 0.45rem 0.65rem; font-size: 0.75rem;}
 }
 @media(max-width:500px){
-  .champ-grid{min-height:360px;}
+  .history-section .content{text-align:center;padding-bottom:0.7rem;}
+  .history-section .content .hero-eyebrow{font-size:0.62rem;letter-spacing:0.16em;margin-bottom:0.08rem;}
+  .history-section .content h2{font-size:1.35rem;line-height:1.15;margin-bottom:0.2rem;}
+  .history-section .content .hero-text{font-size:0.8rem;line-height:1.35;margin:0 auto 0.4rem;max-width:95%;}
+  .champ-grid{min-height:460px;}
   .champ-card{max-width:340px;padding:0.85rem 0.9rem;}
   .champ-img{height:135px;}
   .champ-body{padding:0.7rem 0.8rem 0.9rem;font-size:0.82rem;}
