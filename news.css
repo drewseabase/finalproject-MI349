@@ -277,7 +277,22 @@ li{margin-bottom: 5px;}
 }
 @media(max-width: 400px){
     body{border: 10px solid peru;}
-    .news-page{}
+    .news-page{padding: 2.4rem 0.6rem 2.1rem;}
+    .news-title h1{font-size: 1.8rem;}
+    .subtitle{font-size: 0.88rem; margin-bottom: 2.3rem;}
+    .news-section{padding: 0.9rem 0.75rem 0.9rem; border-radius: 14px; margin-bottom: 2.6rem;}
+    h2{font-size: 1.1rem;}
+    .tagline{font-size: 0.74rem;}
+    .race-grid{min-height: 260px;}
+    .race-grid.training-weeks{min-height: 190px;}
+    .race-card{max-width: 360px; padding: 0.95rem;}
+    .meta{font-size: 0.74rem;}
+    h3{font-size: 0.9rem;}
+    .summary{font-size: 0.84rem;}
+    .details{font-size: 0.74rem; max-width: 210px;}
+    .prog-row{font-size: 0.78rem; padding: 0.45rem 0.6rem;}
+    .prog-header{font-size: 0.72rem;}
+    .control-btn{font-size: 0.72rem; padding: 0.4rem 0.65rem;}
 }
 @media (min-width: 900px) {
   .race-grid--recaps {
