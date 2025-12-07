@@ -56,6 +56,8 @@ main{padding: 18rem 0 0 0;}
 .container .right{ 
     grid-area: img;
     justify-self: center;
+    position: relative;
+    z-index: 1;
 }
 .container .right img{
     display: block;
