@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setTimeout(() => {
       rosterEl.classList.remove("is-fading");
-    }, 600 + 1500); // keep it dark for 1.5s, then fade back in
+    }, 600 + 1000); // keep it dark for 1.5s, then fade back in
   }
 
   setInterval(showNextRosterImage, 7000);
