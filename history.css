@@ -431,7 +431,31 @@ h2{font-size: clamp(2rem, 3vw, 2.5rem); margin: 0; color: #dce6dd;}
  .champ-img{height:170px;}
  .champ-body{padding:.9rem .95rem 1rem;}
  .history-controls{display:flex;justify-content:center;align-items:flex-start;gap:.8rem;margin-top:.6rem;}
- .control-btn{padding:.5rem .7rem;border-radius:999px;border:1px solid #3b7156;background:rgba(4,13,9,.95);color:#e4f0e8;text-transform:uppercase;font-size:.8rem;letter-spacing:.08em;cursor:pointer;white-space:nowrap;}
+ .control-btn{
+  background-color: #0f2621;
+    border-radius: 100px;
+    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset, 
+                rgba(44, 187, 99, .15) 0 1px 2px, 
+                rgba(44, 187, 99, .15) 0 2px 4px, 
+                rgba(44, 187, 99, .15) 0 4px 8px, 
+                rgba(44, 187, 99, .15) 0 8px 16px, 
+                rgba(44, 187, 99, .15) 0 16px 32px;
+    cursor: pointer;
+    font-weight: 700;
+    display: inline-block;
+    padding: 10px 28px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 400ms;
+    border: 0;
+    margin-top: 20px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    color: floralwhite;
+    font-size: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+}
  .control-btn.active{transform:translateY(1px);}
  .history-section:nth-of-type(2){padding:1.4rem 1.1rem;}
  .history-section:nth-of-type(2) .content{text-align:center;}
