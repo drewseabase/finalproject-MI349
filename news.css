@@ -291,7 +291,8 @@ li{margin-bottom: 5px;}
     .summary{font-size: 0.84rem;}
     .details{font-size: 0.74rem; max-width: 210px;}
     .prog-row{font-size: 0.70rem; padding: 0.55rem 0.9rem; gap: 0.55rem;}
-    .event{font-size: 0.35rem;}
+    .athlete{font-size: .55rem;}
+    .event{font-size: 0.45rem;}
     .prog-header{font-size: 0.72rem;}
     .control-btn{font-size: 0.72rem; padding: 0.4rem 0.65rem;}
 }
