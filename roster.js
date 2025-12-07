@@ -57,7 +57,6 @@ document.addEventListener("DOMContentLoaded", function () {
     updateFeaturedFromCard(cards[0]);
   }
 
-
   cards.forEach((card, index) => {
     card.addEventListener("click", () => {
       updateFeaturedFromCard(card);

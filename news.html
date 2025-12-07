@@ -9,6 +9,7 @@
 
 </head>
 <body>
+    <script src="news.js" defer></script>
  <header class="background-img">
     <nav>
         <ul>
@@ -35,8 +36,7 @@
             </div>
             <span class="pill">Meets</span>
         </div>
-    
-        <div class="race-grid">
+        <div class="race-grid race-recaps">
             <!--Gans Creek-->
             <article class="race-card">
                 <div class="meta">
@@ -125,6 +125,10 @@
                     <div class="chip">Top Finishers: Jasper Cane - 143rd</div>
                 </div>
             </article>
+        </div>
+        <div class="race-controls">
+            <button class="control-btn" id="prev-news">‹Prev</button>
+            <button class="control-btn" id="next-news">Next›</button>
         </div>
     </section>
     <section class="news-section">
@@ -308,7 +312,7 @@
             </div>
             <span class="pill">Training Week</span>
         </div>
-        <div class="race-grid">
+        <div class="race-grid training-weeks">
             <!--Monday-->
             <article class="race-card">
                 <div class="training-meta">
@@ -393,6 +397,10 @@
                     <li><strong>Location:</strong> Anywhere</li>
                 </ul>
             </article>
+        </div>
+        <div class="race-controls">
+            <button class="control-btn" id="prev-training">‹Prev</button>
+            <button class="control-btn" id="next-training">Next›</button>
         </div>
     </section>
 
