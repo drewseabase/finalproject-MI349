@@ -182,7 +182,7 @@ p{
     height: auto;
     display: block;
     object-fit: cover;
-    transition: opacity 600ms ease-in-out, transform 800ms;
+    transition: opacity 800ms ease-in-out, transform 800ms;
     opacity: 1;
 }
 /* fade-out state */
