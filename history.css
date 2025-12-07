@@ -380,11 +380,11 @@ h2{font-size: clamp(2rem, 3vw, 2.5rem); margin: 0; color: #dce6dd;}
  .history-section:nth-of-type(2) .hero-eyebrow{font-size:.68rem;letter-spacing:.14em;}
  .history-section:nth-of-type(2) h2{font-size:1.25rem;margin-bottom:.25rem;}
  .history-section:nth-of-type(2) .hero-text{font-size:.86rem;line-height:1.5;margin:.15rem auto .7rem;max-width:26rem;text-align:center;}
- .history-section:nth-of-type(2) .two-col{gap:1.1rem;}
- .history-section:nth-of-type(2) .tradition-copy{font-size:.84rem;gap:.6rem;text-align:center;}
- .history-section:nth-of-type(2) .identity-list{gap:.55rem;}
- .history-section:nth-of-type(2) .identity-item{font-size:.8rem;padding:.45rem .55rem;gap:.45rem;text-align:center;align-items:center;}
- .history-section:nth-of-type(2) .identity-label{font-size:.75rem;letter-spacing:.1em;}
+ .history-culture .two-col{display:flex;flex-direction:column;gap:.9rem;}
+ .history-culture .tradition-copy{font-size:.84rem;}
+ .history-culture .identity-list{align-items:stretch;}
+ .history-culture .identity-item{width:100%;display:flex;flex-direction:column;align-items:flex-start;text-align:left;font-size:.78rem;padding:.45rem .55rem;gap:.4rem;}
+ .history-culture .identity-label{font-size:.72rem;letter-spacing:.1em;}
 }
 @media(max-width:550px){
  .champ-grid{min-height:430px;}
