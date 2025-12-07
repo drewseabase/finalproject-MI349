@@ -29,7 +29,7 @@
             currentIndex = (currentIndex + 1) % rosterImages.length;
             rosterEl.src = rosterImages[currentIndex];
             rosterEl.classList.remove("is-fading");
-        }, 3000);
+        }, 2500);
         }
 
         setInterval(showNextRosterImage, 7000);
