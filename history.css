@@ -263,7 +263,7 @@ h2{font-size: clamp(2rem, 3vw, 2.5rem); margin: 0; color: #dce6dd;}
     text-transform: uppercase;
     letter-spacing: 0.11em;
     color: var(--accent);
-    flex-shrink: 0;
+    
 }
 .spots-grid{
     display: grid;
@@ -354,78 +354,54 @@ h2{font-size: clamp(2rem, 3vw, 2.5rem); margin: 0; color: #dce6dd;}
     .champ-img{height: 155px;}
     .champ-title{font-size: 0.93rem;}
     .champ-body{font-size: 0.86rem;;}
+    .history-section:nth-of-type(2) .hero-eyebrow{font-size:0.7rem;}
+    .history-section:nth-of-type(2) h2{font-size:1.6rem;}
+    .history-section:nth-of-type(2) .hero-text{font-size:0.85rem;}
+    .history-section:nth-of-type(2) .tradition-copy{font-size:0.85rem;}
+    .history-section:nth-of-type(2) .identity-item{font-size:0.8rem;}
+    .history-section:nth-of-type(2) .identity-label{font-size:0.75rem;}
 }
 
-@media(max-width: 650px){
-    body{border: 10px solid orchid;}
-    .champ-card{flex: 1 1 100%; max-width: 100%;}
-    .champ-grid{
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: stretch;
-        min-height: 460px;
-        overflow: hidden;
-    }
-    .champ-card{
-        position:absolute;
-        left:50%;
-        top:0;
-        width:100%;
-        max-width:420px;
-        transform:translateX(-50%) translateY(10px);
-        opacity:0;
-        pointer-events:none;
-        box-shadow:none;
-        transition:opacity 220ms ease,transform 220ms ease;
-    }
-    .champ-card.active{
-        opacity: 1;
-        pointer-events: auto;
-        transform: translateX(-50%) translateY(0);
-        z-index: 1
-    }
-    .champ-card.leaving{
-        opacity:0;
-        pointer-events:none;
-    }
-    .champ-card:hover{
-        transform:translateX(-50%) translateY(0);
-        box-shadow:none;
-    }
-    .champ-img{height:170px;}
-    .champ-body{padding:0.9rem 0.95rem 1rem;}
-    .history-controls{
-       display:flex;
-        justify-content:center;
-        align-items:flex-start;
-        gap:0.8rem;
-        margin-top:0.6rem;
-    }
-    .control-btn{
-        padding: 0.5rem 0.7rem;
-        border-radius: 999px;
-        border: 1px solid #3b7156;
-        background: rgba(4,13,9,0.95);
-        color: #e4f0e8;
-        text-transform: uppercase;
-        font-size: .80rem;
-        letter-spacing: 0.08em;
-        cursor: pointer;
-        white-space: nowrap;
-    }
-    .control-btn.active{transform: translateY(1px);}
+@media(max-width:650px){
+ body{border:10px solid orchid;}
+ .champ-card{flex:1 1 100%;max-width:100%;}
+ .champ-grid{position:relative;display:flex;justify-content:center;align-items:stretch;min-height:460px;overflow:hidden;}
+ .champ-card{position:absolute;left:50%;top:0;width:100%;max-width:420px;transform:translateX(-50%) translateY(10px);opacity:0;pointer-events:none;box-shadow:none;transition:opacity 220ms ease,transform 220ms ease;}
+ .champ-card.active{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(0);z-index:1;}
+ .champ-card.leaving{opacity:0;pointer-events:none;}
+ .champ-card:hover{transform:translateX(-50%) translateY(0);box-shadow:none;}
+ .champ-img{height:170px;}
+ .champ-body{padding:.9rem .95rem 1rem;}
+ .history-controls{display:flex;justify-content:center;align-items:flex-start;gap:.8rem;margin-top:.6rem;}
+ .control-btn{padding:.5rem .7rem;border-radius:999px;border:1px solid #3b7156;background:rgba(4,13,9,.95);color:#e4f0e8;text-transform:uppercase;font-size:.8rem;letter-spacing:.08em;cursor:pointer;white-space:nowrap;}
+ .control-btn.active{transform:translateY(1px);}
+ .history-section:nth-of-type(2){padding:1.4rem 1.1rem;}
+ .history-section:nth-of-type(2) .content{text-align:center;}
+ .history-section:nth-of-type(2) .hero-eyebrow{font-size:.68rem;letter-spacing:.14em;}
+ .history-section:nth-of-type(2) h2{font-size:1.25rem;margin-bottom:.25rem;}
+ .history-section:nth-of-type(2) .hero-text{font-size:.86rem;line-height:1.5;margin:.15rem auto .7rem;max-width:26rem;text-align:center;}
+ .history-section:nth-of-type(2) .two-col{gap:1.1rem;}
+ .history-section:nth-of-type(2) .tradition-copy{font-size:.84rem;gap:.6rem;text-align:center;}
+ .history-section:nth-of-type(2) .identity-list{gap:.55rem;}
+ .history-section:nth-of-type(2) .identity-item{font-size:.8rem;padding:.45rem .55rem;gap:.45rem;text-align:center;align-items:center;}
+ .history-section:nth-of-type(2) .identity-label{font-size:.75rem;letter-spacing:.1em;}
 }
-@media(max-width: 550px){
-    body{border: 10px solid goldenrod;}
-    .champ-grid{min-height: 400px; padding: 0.9rem 1rem;}
-    .champ-img{height: 145px;}
-    .champ-body{font-size: 0.84rem; padding: 0.75rem 0.85rem 0.9rem;}
-    .champ-title{font-size: 0.9rem;}
-    .champ-body .hero-meta{font-size: 0.78rem;}
-    .champ-card:hover{ transform:translateX(-50%) translateY(0); box-shadow:none;}
-    .control-btn{padding: 0.45rem 0.65rem; font-size: 0.75rem;}
+@media(max-width:550px){
+ .champ-grid{min-height:430px;}
+ .champ-card{max-width:380px;padding:1rem;}
+ .champ-img{height:150px;}
+ .champ-body{padding:.75rem .8rem .9rem;font-size:.82rem;}
+ .champ-title{font-size:.9rem;}
+ .champ-card .hero-meta{font-size:.78rem;}
+ .history-section:nth-of-type(2){padding:1.25rem 1rem;}
+ .history-section:nth-of-type(2) .hero-eyebrow{font-size:.64rem;}
+ .history-section:nth-of-type(2) h2{font-size:1.1rem;}
+ .history-section:nth-of-type(2) .hero-text{font-size:.8rem;max-width:24rem;}
+ .history-section:nth-of-type(2) .tradition-copy{font-size:.8rem;}
+ .history-section:nth-of-type(2) .identity-item{font-size:.76rem;padding:.4rem .5rem;}
+ .history-section:nth-of-type(2) .identity-label{font-size:.7rem;}
 }
+
 @media(max-width:500px){
   .history-section .content{text-align:center;padding-bottom:0.7rem;}
   .history-section .content .hero-eyebrow{font-size:0.62rem;letter-spacing:0.16em;margin-bottom:0.08rem;}
@@ -440,10 +416,10 @@ h2{font-size: clamp(2rem, 3vw, 2.5rem); margin: 0; color: #dce6dd;}
 }
   @media(max-width:400px){
   .history-section{padding:1.1rem 0.85rem 1.4rem;}
-  .history-section .content{padding-bottom:0.4rem; margin-bottom:0.15rem; text-align:center;}
+  .history-section .content{padding-bottom:0.2rem; margin-bottom:0.15rem; text-align:center;}
   .history-section .content .hero-eyebrow{font-size:0.5rem; letter-spacing:0.16em; margin-bottom:0.05rem;}
-  .history-section .content h2{font-size:1.3rem;line-height:1.15;margin-bottom:0.1rem;}
-  .history-section .content .hero-text{font-size:0.78rem;line-height:1.35;margin:0 auto 0.25rem;max-width:95%;}
+  .history-section .content h2{font-size:1.3rem; line-height:1.15; margin-bottom:0.1rem;}
+  .history-section .content .hero-text{font-size:0.78rem; line-height:1.35; margin:0 auto 0.25rem; max-width:95%;}
   .champ-grid{min-height:400px; margin-top:0.15rem; padding-top:0.1rem;}
   .champ-card{max-width:290px; padding:0.75rem 0.8rem 1rem;}
   .champ-img{height:120px; margin-bottom:0.35rem;}
