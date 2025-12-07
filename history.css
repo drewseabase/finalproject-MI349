@@ -419,6 +419,7 @@ h2{font-size: clamp(2rem, 3vw, 2.5rem); margin: 0; color: #dce6dd;}
 @media(max-width: 550px){
     body{border: 10px solid goldenrod;}
     .champ-grid{min-height: 400px; padding: 0.9rem 1rem;}
+    .champ-card{padding:0 1rem;}
     .champ-img{height: 145px;}
     .champ-body{font-size: 0.84rem; padding: 0.75rem 0.85rem 0.9rem;}
     .champ-title{font-size: 0.9rem;}
