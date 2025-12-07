@@ -262,6 +262,9 @@ li{margin-bottom: 5px;}
 @media(max-width: 550px){
     body{border: 10px solid brown;}
 }
+@media(max-width: 400px){
+    body{border: 10px solid peru;}
+}
 @media (min-width: 900px) {
   .race-grid--recaps {
     display: grid;
