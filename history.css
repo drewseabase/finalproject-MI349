@@ -448,7 +448,7 @@ h2{font-size: clamp(2rem, 3vw, 2.5rem); margin: 0; color: #dce6dd;}
  .history-section:nth-of-type(2) .tradition-copy{font-size:.8rem;}
  .history-section:nth-of-type(2) .identity-item{font-size:.56rem;padding:.1rem .2rem;}
  .history-section:nth-of-type(2) .identity-label{font-size:.5rem;}
- .values-grid{min-height: 220px;}
+ .values-grid{min-height: 320px;}
  .values-card{max-width: 320px; padding: 0.7rem 0.8rem; font-size: 0.78rem;}
  .value-label{font-size: 0.66rem; letter-spacing: 0.11em;}
  .value-title{font-size: 0.86rem;}
@@ -465,7 +465,7 @@ h2{font-size: clamp(2rem, 3vw, 2.5rem); margin: 0; color: #dce6dd;}
   .champ-body{padding:0.7rem 0.8rem 0.9rem;font-size:0.82rem;}
   .champ-title{font-size:0.9rem;margin-bottom:0.2rem;}
   .champ-body .hero-meta{font-size:0.76rem;}
-   .values-grid{min-height:220px;}
+   .values-grid{min-height:300px;}
   .value-card{ max-width:300px; padding:0.65rem 0.75rem; font-size:0.76rem;}
   .value-label{ font-size:0.62rem; letter-spacing:0.1em;}
   .value-title{font-size:0.84rem;}
@@ -491,7 +491,7 @@ h2{font-size: clamp(2rem, 3vw, 2.5rem); margin: 0; color: #dce6dd;}
   .history-section:nth-of-type(2) .tradition-copy{font-size:0.25rem;}
   .history-section:nth-of-type(2) .identity-item{font-size:0.45rem; padding:0.2rem 0.1rem;}
   .history-section:nth-of-type(2) .identity-label{font-size:0.5rem; letter-spacing:0.09em;}
-  .values-grid{min-height:230px;}
+  .values-grid{min-height:250px;}
   .value-card{ max-width:280px; padding:0.6rem 0.7rem; font-size:0.74rem;}
   .value-label{font-size:0.6rem; letter-spacing:0.1em;}
   .value-title{font-size:0.82rem;}
