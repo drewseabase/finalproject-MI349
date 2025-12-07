@@ -84,6 +84,7 @@ h2{font-size: 1.3rem; margin: 0 auto 7px; text-transform: uppercase;}
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
+    margin-bottom: 15px
 }
 .meta{
     display: flex;
