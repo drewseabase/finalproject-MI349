@@ -251,6 +251,7 @@ li{margin-bottom: 5px;}
         letter-spacing: 0.08em;
         cursor: pointer;
         white-space: nowrap;
+        margin-top: 10px;
     }
     .control-btn:active{transform: translateY(1px);}
 }
