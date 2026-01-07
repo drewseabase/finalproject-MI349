@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // Empty HTMl elements to eventually store athlete data
   const featuredImg = document.getElementById("featured-photo");
   const featuredName = document.getElementById("featured-name");
   const featuredMeta = document.getElementById("featured-meta");
@@ -6,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const featuredPRList = document.querySelector("#featured-prs ul");
   const featuredFactsList = document.querySelector("#featured-facts ul");
 
+  // Puts each athlete into an Array
   const cards = Array.from(document.querySelectorAll(".roster-card"));
   const prevBtn = document.getElementById("prev-roster");
   const nextBtn = document.getElementById("next-roster");
@@ -46,16 +48,20 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function setActiveCard(index) {
-    currentIndex = index;
-    cards.forEach((card, i) => {
-      card.classList.toggle("active", i === index);
+    currentIndex = index; //sets global index to current index to change card 
+    cards.forEach((card, i) => { //iterates through every card in the array
+      card.classList.toggle("active", i === index); //if card is clicked the card with that specific index is "active"
     });
   }
 
+  //If there is a card, sets the active card index to the first element in array by default & uses the first card's data
+  // to populate the featured section so that there isn't a blank space
   if (cards.length > 0) {
     setActiveCard(0);
     updateFeaturedFromCard(cards[0]);
   }
+
+  // A click listener for each card, allowing for the data of each card to transition per athlete
 
   cards.forEach((card, index) => {
     card.addEventListener("click", () => {
@@ -69,6 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  //Buttons for smaller screen size to move the roster back and forth
   if (prevBtn && nextBtn) {
     prevBtn.addEventListener("click", () => {
       if (!cards.length) return;
