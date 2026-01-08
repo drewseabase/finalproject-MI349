@@ -288,17 +288,18 @@ h4{
   position: fixed;
   inset: 0;
   display: none;
-  z-index: 999;
+  z-index: 9999;
 }
 .course-modal.is-open{display: block;}
 .course-modal-backdrop{
-  position: absolute;
+  position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.55);
   backdrop-filter: blur(3px);
+  z-index: 9998;
 }
 .course-modal-panel{
-  position: absolute;
+  position: fixed;
   left: 50%;
   bottom: 0;
   transform: translate(-50%, 100%);
@@ -312,6 +313,7 @@ h4{
   max-height: 80vh;
   overflow-y: auto;
   transition: transform 0.3s ease-out;
+  z-index: 9999;
 }
 .course-modal.is-open .course-modal-panel{transform: translate(-50%, 0);}
 .course-modal-close{
