@@ -45,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     modal.classList.remove('is-open');
     document.body.style.overflow = '';
   }
+  
   document.querySelectorAll('.course-profile-btn').forEach((btn) => {
     btn.addEventListener('click', () => {
 
