@@ -24,7 +24,6 @@ body{
   position: relative;
   z-index: 1;
 }
-
 .roster-hero h1{
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
@@ -32,7 +31,6 @@ body{
   font-size: clamp(2rem, 4vw, 2.8rem);
   margin-bottom: 0.75rem;
 }
-
 .roster-intro{
   max-width: 680px;
   margin: 0 auto;
@@ -40,7 +38,6 @@ body{
   line-height: 1.6;
   font-weight: 500;
 }
-
 .roster-profile{
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.4fr);
@@ -55,7 +52,6 @@ body{
   border-radius: 50px;
   box-shadow: 0 20px 55px rgba(0,0,0,.55);
 }
-
 .profile-photo img{
   width: 100%;
   max-width: 420px;
@@ -64,21 +60,18 @@ body{
   border: 2px solid #0b1b18;
   box-shadow: 0 16px 40px rgba(0,0,0,.55);
 }
-
 .profile-info h2{
   font-family: 'Oswald', sans-serif;
   font-size: clamp(1.6rem, 3vw, 2rem);
   margin: 0 0 .35rem 0;
   text-align: left;
 }
-
 .profile-meta{
   font-size: 0.95rem;
   color: #cfe1d7;
   margin: 0 0 1rem 0;
   text-align: left;
 }
-
 .profile-bio{
   font-size: 0.98rem;
   line-height: 1.7;
@@ -86,27 +79,23 @@ body{
   color: #e4f0e8;
   text-align: left;
 }
-
 .profile-details{
   display: grid;
   grid-template-columns: repeat(2, minmax(0,1fr));
   gap: 1.25rem;
 }
-
 .detail-box{
   background: linear-gradient(135deg, rgba(35, 73, 57, 0.96), rgba(4,13,9,0.98));
   border-radius: 16px;
   padding: 0.9rem 1rem;
   border: 1px solid #3b7156;
 }
-
 .detail-box h3{
   font-family: 'Oswald', sans-serif;
   font-size: 1rem;
   margin: 0 0 .4rem 0;
   text-align: left;
 }
-
 .detail-box ul{
   list-style: none;
   padding: 0;
@@ -115,15 +104,12 @@ body{
   color: #d6e5da;
   text-align: left;
 }
-
 .detail-box li + li{
   margin-top: 0.25rem;
 }
-
 .roster-grid-section{
   margin-bottom: 4rem;
 }
-
 .section-title{
   font-family: 'Oswald', sans-serif;
   font-size: 1.5rem;
@@ -134,13 +120,11 @@ body{
   position: relative;
 }
 p{position: relative; z-index: 1;}
-
 .roster-grid{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 1.5rem;
 }
-
 .roster-card{
   background: linear-gradient(135deg, rgba(35, 73, 57, 0.96), rgba(4,13,9,0.98));
   border-radius: 18px;
@@ -153,23 +137,19 @@ p{position: relative; z-index: 1;}
   will-change: transform;
   cursor: pointer;
 }
-
 .roster-card img{
   width: 100%;
   height: 240px;
   display: block;
   object-fit: cover;
 }
-
 .roster-card:hover{
   transform: translateY(-3px);
   box-shadow: 4px 12px 29px -1px rgba(44,187,99,.79);
 }
-
 .card-body{
   padding: 0.9rem 1.1rem 1.2rem;
 }
-
 .card-body h3{
   font-family: 'Oswald', sans-serif;
   font-size: 1.1rem;
@@ -177,14 +157,12 @@ p{position: relative; z-index: 1;}
   letter-spacing: .05rem;
   text-align: center;
 }
-
 .card-meta{
   font-size: 0.86rem;
   color: #cfe1d7;
   margin: 0 0 .55rem 0;
   text-align: center;
 }
-
 .card-bio{
   font-size: 0.9rem;
   line-height: 1.6;
@@ -192,18 +170,15 @@ p{position: relative; z-index: 1;}
   margin: 0;
   text-align: center;
 }
-
 .race-gallery-section{
   margin-top: 2.5rem;
 }
-
 .gallery-intro{
   font-size: 0.95rem;
   color: #dce6dd;
   max-width: 640px;
   margin-bottom: 1rem;
 }
-
 .race-gallery{
   display: flex;
   gap: 1rem;
@@ -211,7 +186,6 @@ p{position: relative; z-index: 1;}
   padding: 0.5rem 0.25rem 0.75rem;
   scroll-snap-type: x mandatory;
 }
-
 .race-gallery img{
   flex: 0 0 auto;
   width: 260px;
@@ -223,15 +197,12 @@ p{position: relative; z-index: 1;}
   scroll-snap-align: start;
   transition: transform 150ms ease, box-shadow 150ms ease;
 }
-
 .race-gallery img:hover{
   transform: translateY(-2px) scale(1.02);
   box-shadow: 0 14px 32px rgba(0,0,0,.65);
 }
 .roster-controls{display: none;}
-
 body.modal-open{overflow: hidden;}
-
 .athlete-modal{
   position: fixed;
   inset: 0;
@@ -239,7 +210,6 @@ body.modal-open{overflow: hidden;}
   display: none;
 }
 .athlete-modal.open{display: block;}
-
 .athlete-overlay{
   position: absolute;
   inset: 0;
@@ -249,28 +219,31 @@ body.modal-open{overflow: hidden;}
 .athlete-dialog{
   position: relative;
   width: min(980px, calc(100% - 2rem));
-  margin: 5vh auto;
+  margin: 4vh auto;
   border-radius: 28px;
   z-index: 1;
-  margin: 4vh auto;
   max-height: 92vh;
-  overflow: visible;
+  display: flex;
+  overflow: hidden;
 }
 .athlete-close{
   position: absolute;
-  top: 25px;
-  right: 25px;
-  width: 30px;
-  height: 30px;
+  top: 20px;
+  right: 20px;
+  width: 34px;
+  height: 34px;
   border-radius: 999px;
+  z-index: 10;
+
+  display: grid;
+  place-items: center;
+
   border: 1px solid rgba(255,255,255,0.18);
   background: rgba(4,13,9,0.85);
   color: #e4f0e8;
-  font-size: 1.1rem;
+  font-size: 1rem;
   cursor: pointer;
-  z-index: 2;
 }
-
 .athlete-modal-nav{
   display: flex;
   justify-content: center;
@@ -293,9 +266,10 @@ body.modal-open{overflow: hidden;}
 }
 .athlete-dialog .roster-profile{
   margin: 0;
-  max-height: none;
-  overflow: visible;
-  padding: 2rem 2.5rem 2rem 2.5rem;
+  width: 100%;
+  max-height: 92vh;
+  overflow: auto;
+  padding: 2.25rem 2.5rem 2rem;
 }
 .athlete-dialog .profile-photo{
   position: relative;
@@ -310,273 +284,115 @@ body.modal-open{overflow: hidden;}
   object-fit: cover;
   display: block;
 }
-.athlete-photo-nav{
-  height: 56px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-  margin-top: 12px;
-}
-@media (max-width: 900px){
-  .roster-profile{
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-  .roster-card{
-    padding-bottom: .8rem;
-  }
-  .profile-photo{
-    display: flex;
-    justify-content: center;
-  }
-  .profile-details{
-    grid-template-columns: 1fr;
-  }
-  .profile-info{
-    text-align: left;
-  }
-  .profile-meta{
-    font-size: 0.75rem;
-  }
-  .profile-bio{
-    font-size: 0.85rem;
-  }
-  .detail-box{
-    display: none;
-  }
-  .roster-header-row{
-    display: block;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-  .roster-header-right{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0.75rem;
-  }
-  .roster-controls{
-    display: flex;
-    justify-content: center;
-    margin-top: 0.25rem;
-    gap: 1rem;
-  }
-  .control-btn{
-    padding: 0.4rem 0.8rem;
-    border-radius: 999px;
-    border: 1px solid #3b7156;
-    background: rgba(4,13,9,0.95);
-    color: #e4f0e8;
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    cursor: pointer;
-    white-space: nowrap;
-    display: flex;
-  }
-  .control-btn:active{
-    transform: translateY(1px);
-  }
-  .roster-grid{
-    display: flex;
-    overflow: hidden;
-    position: relative;
-    justify-content: center;
-    margin-bottom: 0.75rem;
-    padding: 5px 5px;
-  }
-  .roster-card{
-    width: 500px;
-    flex-shrink: 0;
-    display: none;     
-    box-shadow: none;  
-    margin-top: 5px;
-  }
-  .roster-card img{height: 350px; width: auto; box-shadow: none;}
-  .roster-card:hover{transform: scale(1.02); box-shadow: none;}
-  .roster-card.active{display: flex;}
- 
-  .athlete-dialog{
-    margin: 3vh auto;
-    width: min(980px, calc(100% - 1.25rem));
-  }
-  .athlete-dialog .roster-profile{
-    border-radius: 26px;
-  }
+@media (max-width:900px){
+  .roster-profile{grid-template-columns:1fr;text-align:center;}
+  .roster-card{padding-bottom:.8rem;}
+  .profile-photo{display:flex;justify-content:center;}
+  .profile-details{grid-template-columns:1fr;}
+  .profile-info{text-align:left;}
+  .profile-meta{font-size:.75rem;}
+  .profile-bio{font-size:.85rem;}
+  .detail-box{display:none;}
+  .roster-header-row{display:block;margin-bottom:1rem;text-align:center;}
+  .roster-controls{display:flex;justify-content:center;margin-top:.25rem;gap:1rem;}
+  .control-btn{padding:.4rem .8rem;border-radius:999px;border:1px solid #3b7156;background:rgba(4,13,9,.95);color:#e4f0e8;font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;cursor:pointer;white-space:nowrap;display:flex;}
+  .control-btn:active{transform:translateY(1px);}
+  .roster-grid{display:flex;overflow:hidden;position:relative;justify-content:center;margin-bottom:.75rem;padding:5px 5px;}
+  .roster-card{width:500px;flex-shrink:0;display:none;box-shadow:none;margin-top:5px;}
+  .roster-card img{height:350px;width:auto;box-shadow:none;}
+  .roster-card:hover{transform:scale(1.02);box-shadow:none;}
+  .roster-card.active{display:flex;}
+  .roster-grid .roster-card:first-child{display: flex;}
+  .athlete-dialog{margin:3vh auto;width:min(980px,calc(100% - 1.25rem));max-height:94vh;display:flex;justify-content:center;}
+  .athlete-dialog .roster-profile{border-radius:26px;max-height:94vh;overflow:auto;padding:2.6rem 1.6rem 1.2rem;}
+  .athlete-close{top:20px;right:20px;width:32px;height:32px;font-size:.95rem;display:grid;place-items:center;z-index:10;}
+  .athlete-dialog .profile-photo img{height:250px;object-position:50% 20%;} /* taller + show more forehead */
+  .athlete-modal-nav{display: none;}
+  .athlete-dialog .profile-info h2{margin:0 0 .2rem 0;}
+  .athlete-dialog .profile-meta{margin:0 0 .5rem 0;}
+  .athlete-dialog .profile-bio{margin:0 0 .75rem 0;line-height:1.5;}
+  .roster-grid{display:flex;justify-content:center;align-items:stretch}
+  .roster-grid .roster-card{display:none!important;margin:0 auto}
+  .roster-grid .roster-card.active{display:flex!important}
 }
 
+@media (max-width:600px){
+  .roster-page{padding-top:4rem;}
+  .race-gallery img{width:220px;height:150px;}
+  .roster-profile{grid-template-columns:1fr;text-align:center;}
+  .profile-photo{display:flex;justify-content:center;}
+  .profile-details{grid-template-columns:1fr;}
+  .profile-info{text-align:left;}
+  .profile-meta{font-size:.75rem;}
+  .profile-bio{font-size:.85rem;}
+  .detail-box{display:none;}
+  .roster-header-row{flex-direction:column;align-items:flex-start;text-align:center;}
+  .roster-controls{display:flex;justify-content:center;gap:.8rem;}
+  .control-btn{background-color:#0f2621;border-radius:100px;box-shadow:rgba(44,187,99,.2) 0 -25px 18px -14px inset,rgba(44,187,99,.15) 0 1px 2px,rgba(44,187,99,.15) 0 2px 4px,rgba(44,187,99,.15) 0 4px 8px,rgba(44,187,99,.15) 0 8px 16px,rgba(44,187,99,.15) 0 16px 32px;cursor:pointer;font-weight:700;display:inline-block;padding:10px 28px;text-align:center;text-decoration:none;transition:all 400ms;border:0;margin-top:20px;user-select:none;-webkit-user-select:none;touch-action:manipulation;color:floralwhite;font-size:1rem;font-family:'Courier New',Courier,monospace;}
+  .control-btn:active{transform:translateY(1px);}
+  .roster-grid{display:flex;justify-content:center;overflow:hidden;position:relative;margin-bottom:10px;padding:5px 5px;}
+  .roster-card{width:450px;flex-shrink:0;display:none;box-shadow:none;margin-top:5px;}
+  .roster-card img{height:350px;width:auto;box-shadow:none;}
+  .roster-card:hover{transform:scale(1.01);box-shadow:none;}
+  .roster-card.active{display:flex;}
+  .roster-grid .roster-card:first-child{display: flex;}
 
-@media (max-width: 600px){
-  .roster-page{
-    padding-top: 4rem;
-  }
-  .race-gallery img{ width: 220px; height: 150px;}
-  .roster-profile{ grid-template-columns: 1fr; text-align: center;}
-
-  .profile-photo{ display: flex; justify-content: center;}  
-  .profile-details{ grid-template-columns: 1fr;}
-  .profile-info{ text-align: left;}
-  .profile-meta{font-size: 0.75rem;}
-  .profile-bio{font-size: 0.85rem;}
-  .detail-box{display: none;}
-  .roster-header-row{
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: center;
-  }
-  .roster-header-right{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0.75rem;
-  }
-  .roster-controls{
-    display: flex;
-    justify-content: center;
-    gap: 0.8rem;
-  }
-  .control-btn{
-    background-color: #0f2621;
-    border-radius: 100px;
-    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset, 
-                rgba(44, 187, 99, .15) 0 1px 2px, 
-                rgba(44, 187, 99, .15) 0 2px 4px, 
-                rgba(44, 187, 99, .15) 0 4px 8px, 
-                rgba(44, 187, 99, .15) 0 8px 16px, 
-                rgba(44, 187, 99, .15) 0 16px 32px;
-    cursor: pointer;
-    font-weight: 700;
-    display: inline-block;
-    padding: 10px 28px;
-    text-align: center;
-    text-decoration: none;
-    transition: all 400ms;
-    border: 0;
-    margin-top: 20px;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    color: floralwhite;
-    font-size: 1rem;
-    font-family: 'Courier New', Courier, monospace;
-  }
-  
-  .control-btn:active{
-    transform: translateY(1px);
-  }
-  .roster-grid{
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-    position: relative;
-    margin-bottom: 10px;
-    padding: 5px 5px ;
-  }
-  .roster-card{
-    width: 450px;
-    flex-shrink: 0;
-    display: none;     
-    box-shadow: none; 
-    margin-top: 5px; 
-  }
-  .roster-card img{height: 350px; width: auto; box-shadow: none;}
-  .roster-card:hover{transform: scale(1.01); box-shadow: none;}
-  .roster-card.active{display: flex;}     
-  }
-
-  @media(max-width: 550px){
-  .profile-meta{font-size: 0.65rem;}
-  .profile-bio{font-size: 0.75rem;}
-  .detail-box{display: none;}
-   .roster-grid{
-    display: flex;
-    overflow: hidden;
-    position: relative;
-    justify-content: center;
-    margin-bottom: 10px;
-  }
-  .roster-header-row{ text-align: center;}
-  .roster-card{
-    width: 300px;
-    flex-shrink: 0;
-    display: none;     
-    box-shadow: none;  
-  }
-  .roster-card img{height: 300px; width: auto; box-shadow: none;}
-  .roster-card:hover{transform: scale(1px);}
-  .roster-card.active{display: flex;}
-    .roster-controls{
-    display: flex;
-    justify-content: center;
-    gap: 0.8rem;
-  }
-  .control-btn{
-    padding: 0.5rem 0.7rem;
-    background-color: #0f2621;
-    border-radius: 100px;
-    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset, 
-                rgba(44, 187, 99, .15) 0 1px 2px, 
-                rgba(44, 187, 99, .15) 0 2px 4px, 
-                rgba(44, 187, 99, .15) 0 4px 8px, 
-                rgba(44, 187, 99, .15) 0 8px 16px, 
-                rgba(44, 187, 99, .15) 0 16px 32px;
-    color: #e4f0e8;
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    cursor: pointer;
-    white-space: nowrap;
-  }
-  .control-btn:active{
-    transform: translateY(1px);
-  }
-  }
-
-@media (max-width: 400px){
-  .profile-meta{font-size: 0.65rem;}
-  .profile-bio{font-size: 0.75rem;}
-  .detail-box{display: none;}
-   .roster-grid{
-    display: flex;
-    overflow: hidden;
-    position: relative;
-    justify-content: center;
-    margin-bottom: 10px;
-  }
-   .roster-header-row{ text-align: center;}
-  .roster-card{
-    width: 300px;
-    flex-shrink: 0;
-    display: none;     
-    box-shadow: none;  
-  }
-  .roster-card img{height: 350px; width: auto; box-shadow: none;}
-  .roster-card:hover{transform: scale(1px);}
-  .roster-card.active{display: flex;}
-    .roster-controls{
-    display: flex;
-    justify-content: center;
-    gap: 0.8rem;
-  }
-  .control-btn{
-    padding: 0.5rem 0.7rem;
-    border-radius: 999px;
-    border: 1px solid #3b7156;
-    background: rgba(4,13,9,0.95);
-    color: #e4f0e8;
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    cursor: pointer;
-    white-space: nowrap;
-  }
-  .control-btn:active{
-    transform: translateY(1px);
-  }
+  .athlete-dialog{margin:2.5vh auto;max-height:96vh;display:flex;justify-content:center;}
+  .athlete-dialog .roster-profile{max-height:96vh;overflow:auto;padding:2.4rem 1.1rem 1rem;}
+  .athlete-close{top:12px;right:12px;width:28px;height:28px;font-size:.9rem;display:grid;place-items:center;z-index:10;}
+  .athlete-dialog .profile-photo img{height:235px;object-position:50% 18%;} /* taller + shift image down */
+  .athlete-modal-nav{margin-top:6px;gap:10px;}
+  .athlete-dialog .profile-info h2{margin:0 0 .15rem 0;}
+  .athlete-dialog .profile-meta{margin:0 0 .45rem 0;}
+  .athlete-dialog .profile-bio{margin:0 0 .65rem 0;line-height:1.45;}
 }
+
+@media (max-width:550px){
+  .profile-meta{font-size:.65rem;}
+  .profile-bio{font-size:.75rem;}
+  .detail-box{display:none;}
+  .roster-grid{display:flex;overflow:hidden;position:relative;justify-content:center;margin-bottom:10px;}
+  .roster-header-row{text-align:center;}
+  .roster-card{width:300px;flex-shrink:0;display:none;box-shadow:none;}
+  .roster-card img{height:300px;width:auto;box-shadow:none;}
+  .roster-card:hover{transform:scale(1px);}
+  .roster-controls{display:flex;justify-content:center;gap:.8rem;}
+  .control-btn{padding:.5rem .7rem;background-color:#0f2621;border-radius:100px;box-shadow:rgba(44,187,99,.2) 0 -25px 18px -14px inset,rgba(44,187,99,.15) 0 1px 2px,rgba(44,187,99,.15) 0 2px 4px,rgba(44,187,99,.15) 0 4px 8px,rgba(44,187,99,.15) 0 8px 16px,rgba(44,187,99,.15) 0 16px 32px;color:#e4f0e8;font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;cursor:pointer;white-space:nowrap;}
+  .control-btn:active{transform:translateY(1px);}
+  .roster-card.active{display:flex;}
+  .roster-grid .roster-card:first-child{display: flex;}
+
+  .athlete-dialog{max-height:96vh;display:flex;justify-content:center;}
+  .athlete-dialog .roster-profile{max-height:96vh;overflow:auto;padding:2.25rem 1rem .9rem;}
+  .athlete-dialog .profile-photo img{height:220px;object-position:50% 18%;} /* taller + shift down */
+  .athlete-modal-nav{margin-top:6px;gap:10px;}
+  .athlete-dialog .profile-info h2{margin:0 0 .15rem 0;}
+  .athlete-dialog .profile-meta{margin:0 0 .4rem 0;}
+  .athlete-dialog .profile-bio{margin:0 0 .6rem 0;line-height:1.42;}
+}
+
+@media (max-width:400px){
+  .profile-meta{font-size:.65rem;}
+  .profile-bio{font-size:.75rem;}
+  .detail-box{display:none;}
+  .roster-grid{display:flex;overflow:hidden;position:relative;justify-content:center;margin-bottom:10px;}
+  .roster-header-row{text-align:center;}
+  .roster-card{width:300px;flex-shrink:0;display:none;box-shadow:none;}
+  .roster-card img{height:350px;width:auto;box-shadow:none;}
+  .roster-card:hover{transform:scale(1px);}
+  .roster-controls{display:flex;justify-content:center;gap:.8rem;}
+  .control-btn{padding:.5rem .7rem;border-radius:999px;border:1px solid #3b7156;background:rgba(4,13,9,.95);color:#e4f0e8;font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;cursor:pointer;white-space:nowrap;}
+  .control-btn:active{transform:translateY(1px);}
+  .roster-card.active{display:flex;}
+  .roster-grid .roster-card:first-child{display: flex;}
+
+  .athlete-dialog{max-height:97vh;display:flex;justify-content:center;}
+  .athlete-dialog .roster-profile{max-height:97vh;overflow:auto;padding:2.15rem .9rem .85rem;}
+  .athlete-dialog .profile-photo img{height:210px;object-position:50% 16%;} /* taller + shift down */
+  .athlete-modal-nav{margin-top:6px;gap:10px;}
+  .athlete-dialog .profile-info h2{margin:0 0 .1rem 0;}
+  .athlete-dialog .profile-meta{margin:0 0 .35rem 0;}
+  .athlete-dialog .profile-bio{margin:0 0 .55rem 0;line-height:1.4;}
+}
+
+

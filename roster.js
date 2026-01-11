@@ -1,7 +1,32 @@
 document.addEventListener("DOMContentLoaded", () => {
   const cards = Array.from(document.querySelectorAll(".roster-card"));
 
-  // ---- Modal elements (created from HTML you’ll add below) ----
+  // --- Roster slider controls (mobile) ---
+  const rosterPrev = document.getElementById("prev-roster");
+  const rosterNext = document.getElementById("next-roster");
+  let sliderIndex = 0;
+
+  function setActiveCard(index) {
+    if (!cards.length) return;
+    sliderIndex = (index + cards.length) % cards.length;
+    cards.forEach((card, i) => card.classList.toggle("active", i === sliderIndex));
+  }
+
+  function sliderPrev() {
+    setActiveCard(sliderIndex - 1);
+  }
+
+  function sliderNext() {
+    setActiveCard(sliderIndex + 1);
+  }
+
+  // Make sure at least one card is active (fixes "everything disappears" on small screens)
+  if (cards.length) setActiveCard(0);
+
+  if (rosterPrev) rosterPrev.addEventListener("click", sliderPrev);
+  if (rosterNext) rosterNext.addEventListener("click", sliderNext);
+
+  // ---- Modal elements ----
   const modal = document.getElementById("athlete-modal");
   const overlay = document.getElementById("athlete-overlay");
   const closeBtn = document.getElementById("athlete-close");
@@ -16,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const prevBtn = document.getElementById("modal-prev");
   const nextBtn = document.getElementById("modal-next");
 
-  let currentIndex = 0;
+  let modalIndex = 0;
   let lastFocusedEl = null;
 
   function populateModalFromCard(card) {
@@ -75,17 +100,15 @@ document.addEventListener("DOMContentLoaded", () => {
   function openModal(index) {
     if (!cards.length) return;
 
-    currentIndex = index;
+    modalIndex = (index + cards.length) % cards.length;
     lastFocusedEl = document.activeElement;
 
-    populateModalFromCard(cards[currentIndex]);
+    populateModalFromCard(cards[modalIndex]);
 
-    // show
     modal.classList.add("open");
     modal.setAttribute("aria-hidden", "false");
     document.body.classList.add("modal-open");
 
-    // focus close button for accessibility
     if (closeBtn) closeBtn.focus();
   }
 
@@ -94,35 +117,40 @@ document.addEventListener("DOMContentLoaded", () => {
     modal.setAttribute("aria-hidden", "true");
     document.body.classList.remove("modal-open");
 
-    // restore focus
     if (lastFocusedEl && typeof lastFocusedEl.focus === "function") {
       lastFocusedEl.focus();
     }
   }
 
-  function goPrev() {
+  function goPrevModal() {
     if (!cards.length) return;
-    currentIndex = (currentIndex - 1 + cards.length) % cards.length;
-    populateModalFromCard(cards[currentIndex]);
+    modalIndex = (modalIndex - 1 + cards.length) % cards.length;
+    populateModalFromCard(cards[modalIndex]);
+    setActiveCard(modalIndex); // keep roster slider in sync too
   }
 
-  function goNext() {
+  function goNextModal() {
     if (!cards.length) return;
-    currentIndex = (currentIndex + 1) % cards.length;
-    populateModalFromCard(cards[currentIndex]);
+    modalIndex = (modalIndex + 1) % cards.length;
+    populateModalFromCard(cards[modalIndex]);
+    setActiveCard(modalIndex); // keep roster slider in sync too
   }
 
-  // Make cards keyboard accessible + open modal on click/Enter/Space
+  // Cards: click / keyboard open modal + sync slider index
   cards.forEach((card, index) => {
     if (!card.hasAttribute("tabindex")) card.setAttribute("tabindex", "0");
     card.setAttribute("role", "button");
     card.setAttribute("aria-haspopup", "dialog");
 
-    card.addEventListener("click", () => openModal(index));
+    card.addEventListener("click", () => {
+      setActiveCard(index);
+      openModal(index);
+    });
 
     card.addEventListener("keydown", (e) => {
       if (e.key === "Enter" || e.key === " ") {
         e.preventDefault();
+        setActiveCard(index);
         openModal(index);
       }
     });
@@ -133,8 +161,8 @@ document.addEventListener("DOMContentLoaded", () => {
   if (overlay) overlay.addEventListener("click", closeModal);
 
   // Prev/Next inside modal
-  if (prevBtn) prevBtn.addEventListener("click", goPrev);
-  if (nextBtn) nextBtn.addEventListener("click", goNext);
+  if (prevBtn) prevBtn.addEventListener("click", goPrevModal);
+  if (nextBtn) nextBtn.addEventListener("click", goNextModal);
 
   // Keyboard controls while modal open
   document.addEventListener("keydown", (e) => {
@@ -145,18 +173,16 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
       closeModal();
     }
-
-    // Optional: arrow navigation
     if (e.key === "ArrowLeft") {
       e.preventDefault();
-      goPrev();
+      goPrevModal();
     }
     if (e.key === "ArrowRight") {
       e.preventDefault();
-      goNext();
+      goNextModal();
     }
 
-    // Basic focus trap
+    // Focus trap
     if (e.key === "Tab") {
       const focusables = modal.querySelectorAll(
         'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
