@@ -120,17 +120,12 @@ p{
     max-width: 85ch;
 }
 .eyebrow{
-    display: inline-block;
-    background: #313d3a;
-    color: #cfe9df;
-    border: 1px solid #21483f;
-    padding: .38rem .65rem;
-    border-radius: 999px;
-    font-weight: 700;
-    font-size: 1rem;
-    letter-spacing: .2px;
-    margin-bottom: .3rem;
-    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 0.25rem 0.65rem;
+    color: #53d898;
+    flex-shrink: 0;
 }
 .btn{ 
     background-color: #0f2621;
