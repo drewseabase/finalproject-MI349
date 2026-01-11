@@ -170,7 +170,7 @@ p{
     height: auto;
     display: block;
     margin-top: -250px;
-    filter: drop-shadow(0 0 0 rgb(20, 20, 20)) drop-shadow(0 0 15px rgb(20,20,20));
+    filter: drop-shadow(0 0 0 white) drop-shadow(0 0 12px white);
     opacity: .95;
 }
 .roster-slideshow{
@@ -185,10 +185,6 @@ p{
 /* fade-out state */
 .roster-slideshow.is-fading{opacity: 0;}
 
-.panel_body img:hover{
-    transform: scale(1.05);
-    filter: drop-shadow(0 0 0 white) drop-shadow(0 0 12px white);
-}
 .card_img img{
     width: min(450px, 60vw);
     max-width: 100%;
@@ -198,8 +194,9 @@ p{
     border-radius: 25px;
     border: 1px solid black;
     margin-top: 30px;
+    box-shadow: 4px 12px 29px -1px rgba(44,187,99,.79);
 }
-.card_img img:hover{ transform: scale(1.02);}
+
 #courses .panel, #history .panel,#news .panel{transform: translateY(-5rem);}
 .second-container{
     display: grid;
