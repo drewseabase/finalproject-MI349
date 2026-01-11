@@ -49,7 +49,6 @@ body{
   margin-bottom: 4rem;
   position: relative;
   z-index: 1;
-
   border: 1.75px solid black;
   padding: 20px;
   background: linear-gradient(135deg, rgba(35, 73, 57, 0.96), rgba(4,13,9,0.98));
@@ -70,14 +69,14 @@ body{
   font-family: 'Oswald', sans-serif;
   font-size: clamp(1.6rem, 3vw, 2rem);
   margin: 0 0 .35rem 0;
-  text-align: center;
+  text-align: left;
 }
 
 .profile-meta{
   font-size: 0.95rem;
   color: #cfe1d7;
   margin: 0 0 1rem 0;
-  text-align: center;
+  text-align: left;
 }
 
 .profile-bio{
@@ -85,7 +84,7 @@ body{
   line-height: 1.7;
   margin: 0 0 1.5rem 0;
   color: #e4f0e8;
-  text-align: center;
+  text-align: left;
 }
 
 .profile-details{
@@ -105,7 +104,7 @@ body{
   font-family: 'Oswald', sans-serif;
   font-size: 1rem;
   margin: 0 0 .4rem 0;
-  text-align: center;
+  text-align: left;
 }
 
 .detail-box ul{
@@ -114,7 +113,7 @@ body{
   margin: 0;
   font-size: 0.9rem;
   color: #d6e5da;
-  text-align: center;
+  text-align: left;
 }
 
 .detail-box li + li{
@@ -131,7 +130,10 @@ body{
   text-transform: uppercase;
   letter-spacing: 0.12em;
   margin-bottom: 1.5rem;
+  z-index: 1;
+  position: relative;
 }
+p{position: relative; z-index: 1;}
 
 .roster-grid{
   display: grid;
@@ -161,7 +163,7 @@ body{
 
 .roster-card:hover{
   transform: translateY(-3px);
-  box-shadow: 0 18px 40px rgb(205, 205, 205);
+  box-shadow: 4px 12px 29px -1px rgba(44,187,99,.79);
 }
 
 .card-body{
@@ -228,6 +230,94 @@ body{
 }
 .roster-controls{display: none;}
 
+body.modal-open{overflow: hidden;}
+
+.athlete-modal{
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+}
+.athlete-modal.open{display: block;}
+
+.athlete-overlay{
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.72);
+  backdrop-filter: blur(6px);
+}
+.athlete-dialog{
+  position: relative;
+  width: min(980px, calc(100% - 2rem));
+  margin: 5vh auto;
+  border-radius: 28px;
+  z-index: 1;
+  margin: 4vh auto;
+  max-height: 92vh;
+  overflow: visible;
+}
+.athlete-close{
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(4,13,9,0.85);
+  color: #e4f0e8;
+  font-size: 1.1rem;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.athlete-modal-nav{
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+  gap: 12px;
+  z-index: 2;
+}
+.modal-nav-btn{
+  width: 35px;
+  height: 30px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(4,13,9,0.85);
+  color: #e4f0e8;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+.modal-profile{
+  margin: 0;
+}
+.athlete-dialog .roster-profile{
+  margin: 0;
+  max-height: none;
+  overflow: visible;
+  padding: 2rem 2.5rem 2rem 2.5rem;
+}
+.athlete-dialog .profile-photo{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.athlete-dialog .profile-photo img{
+  width: 100%;
+  max-width: 420px;
+  height: 360px;
+  object-fit: cover;
+  display: block;
+}
+.athlete-photo-nav{
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+}
 @media (max-width: 900px){
   .roster-profile{
     grid-template-columns: 1fr;
@@ -309,6 +399,13 @@ body{
   .roster-card:hover{transform: scale(1.02); box-shadow: none;}
   .roster-card.active{display: flex;}
  
+  .athlete-dialog{
+    margin: 3vh auto;
+    width: min(980px, calc(100% - 1.25rem));
+  }
+  .athlete-dialog .roster-profile{
+    border-radius: 26px;
+  }
 }
 
 

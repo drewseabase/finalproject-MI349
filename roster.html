@@ -29,39 +29,6 @@
         their stories, backgrounds, and the miles they have put in to wear the green and white.
       </p>
     </section>
-
-
-<section class="roster-profile featured">
-        <div class="profile-photo">
-            <img id="featured-photo" src="RosterImages/rileyheadshot.JPG" alt="rileyheadshot">
-        </div>
-        <div class="profile-info">
-            <h2 id="featured-name">Empty</h2>
-            <p id="featured-meta" class="profile-meta"></p>
-            <p id="featured-bio" class="profile-bio"></p>
-
-        <div class="profile-details">
-            <div id="featured-prs" class="detail-box">
-                <h3>Personal Bests</h3>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-            </div>
-            <div id="featured-facts" class="detail-box">
-                <h3>Quick Facts</h3>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-            </div>
-        </div>
-      </div>
-</section>
-
     <!-- Roster Grid -->
     <section class="roster-grid-section">
 
@@ -77,11 +44,10 @@
          data-meta="Senior · Kinesiology · Hartland, MI"
          data-bio="Riley is a fourth year kinesiology major from Hartland, Michigan. He has a decade of running experience under his belt,
          giving him immense experience in this profession. His favorite memory as a Spartan is helping the team place second at the Big Ten
-         Cross Country Championships, a moment that reflects the pride and competitive edge he brings to this program. His favorite course that
+         Cross Country Championships. His favorite course that
          he has raced on is Nuttycombe, and he chose MSU because it felt like home, a team and culture that matched his own mindset and values.
          Riley loves tough sessions, especially 8x1ks. His all-time favorite session was this year when a massive storm randomly rolled in mid-workout,
-         turning the session into one of the hardest workouts of his career weather wise. Outside of running, he enjoys game nights with friends
-         and the simple moments that bring the team closer to one another."
+         turning the session into one of the hardest workouts of his career weather wise."
          data-img="RosterImages/rileyheadshot.JPG"
          data-prs="8K XC - 22:50|10k XC - 29:26|5K Track - 13:34|3k Track - 8:05"
          data-facts ="· He plays bass guitar|· He's a photographer|· Has an Icelandic Tattoo |· Pre-race hype song: “Neverender” - Tame Impala">
@@ -189,8 +155,7 @@
         high school. His favorite XC course is Michigan State's very own Forest Akers East, the home place of the 2025 Big Ten Conference
         championships. He chose MSU for its team culture, gritty atmosphere, and strong coaching/support staff. One of his favorite memories
         as a Spartan is competing at the Big Ten Cross Country Championships at home this fall. Parker's favorite workouts are the classic
-        8X1200 at Nancy Moore, or threshold work at Hawk Island. Outside of running he loves spending time with family and friends, swimming
-        and learning new things."
+        8X1200 at Nancy Moore, or threshold work at Hawk Island."
         data-img="RosterImages/parkerheadshot.JPG"
         data-prs="8K XC - 23:20|10k XC - 29:52|5K Track - 14:00|3k Track - 8:03"
         data-facts ="· He's getting married this summer!|· Loves going on hikes|· Favorite Athlete: Michael Phelps">
@@ -382,5 +347,43 @@
             </div>
         </div>
   </footer>
+
+ <!-- Athlete Modal -->
+<div id="athlete-modal" class="athlete-modal" aria-hidden="true">
+  <div id="athlete-overlay" class="athlete-overlay"></div>
+
+  <div class="athlete-dialog" role="dialog" aria-modal="true" aria-label="Athlete profile">
+    <button id="athlete-close" class="athlete-close" type="button" aria-label="Close modal">✕</button>
+
+    <div class="roster-profile modal-profile">
+      <div class="profile-photo">
+        <img id="modal-photo" src="" alt="">
+
+        <div class="athlete-modal-nav">
+          <button id="modal-prev" class="modal-nav-btn" type="button" aria-label="Previous athlete">‹</button>
+          <button id="modal-next" class="modal-nav-btn" type="button" aria-label="Next athlete">›</button>
+        </div>
+      </div>
+
+      <div class="profile-info">
+        <h2 id="modal-name"></h2>
+        <p id="modal-meta" class="profile-meta"></p>
+        <p id="modal-bio" class="profile-bio"></p>
+
+        <div class="profile-details">
+          <div id="modal-prs" class="detail-box">
+            <h3>Personal Bests</h3>
+            <ul></ul>
+          </div>
+
+          <div id="modal-facts" class="detail-box">
+            <h3>Quick Facts</h3>
+            <ul></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>

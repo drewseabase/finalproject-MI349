@@ -1,92 +1,178 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // Empty HTMl elements to eventually store athlete data
-  const featuredImg = document.getElementById("featured-photo");
-  const featuredName = document.getElementById("featured-name");
-  const featuredMeta = document.getElementById("featured-meta");
-  const featuredBio = document.getElementById("featured-bio");
-  const featuredPRList = document.querySelector("#featured-prs ul");
-  const featuredFactsList = document.querySelector("#featured-facts ul");
-
-  // Puts each athlete into an Array
+document.addEventListener("DOMContentLoaded", () => {
   const cards = Array.from(document.querySelectorAll(".roster-card"));
-  const prevBtn = document.getElementById("prev-roster");
-  const nextBtn = document.getElementById("next-roster");
+
+  // ---- Modal elements (created from HTML you’ll add below) ----
+  const modal = document.getElementById("athlete-modal");
+  const overlay = document.getElementById("athlete-overlay");
+  const closeBtn = document.getElementById("athlete-close");
+
+  const modalImg = document.getElementById("modal-photo");
+  const modalName = document.getElementById("modal-name");
+  const modalMeta = document.getElementById("modal-meta");
+  const modalBio = document.getElementById("modal-bio");
+  const modalPRList = document.querySelector("#modal-prs ul");
+  const modalFactsList = document.querySelector("#modal-facts ul");
+
+  const prevBtn = document.getElementById("modal-prev");
+  const nextBtn = document.getElementById("modal-next");
 
   let currentIndex = 0;
+  let lastFocusedEl = null;
 
-  function updateFeaturedFromCard(card) {
-    const name = card.dataset.name;
-    const meta = card.dataset.meta;
-    const bio = card.dataset.bio;
-    const img = card.dataset.img;
-    const prs = card.dataset.prs;
-    const facts = card.dataset.facts;
+  function populateModalFromCard(card) {
+    const name = card.dataset.name || "";
+    const meta = card.dataset.meta || "";
+    const bio = card.dataset.bio || "";
+    const img = card.dataset.img || "";
+    const prs = card.dataset.prs || "";
+    const facts = card.dataset.facts || "";
 
-    featuredName.textContent = name;
-    featuredMeta.textContent = meta;
-    featuredBio.textContent = bio;
-    featuredImg.src = img;
-    featuredImg.alt = name + " headshot";
+    modalName.textContent = name;
+    modalMeta.textContent = meta;
+    modalBio.textContent = bio;
 
-    if (prs && featuredPRList) {
-      featuredPRList.innerHTML = "";
-      prs.split("|").forEach(pr => {
-        const li = document.createElement("li");
-        li.textContent = pr.trim();
-        featuredPRList.appendChild(li);
-      });
+    if (img) {
+      modalImg.src = img;
+      modalImg.alt = `${name} headshot`;
+    } else {
+      modalImg.removeAttribute("src");
+      modalImg.alt = "";
     }
 
-    if (facts && featuredFactsList) {
-      featuredFactsList.innerHTML = "";
-      facts.split("|").forEach(fact => {
+    // Personal Bests
+    if (modalPRList) {
+      modalPRList.innerHTML = "";
+      if (prs.trim()) {
+        prs.split("|").forEach((pr) => {
+          const li = document.createElement("li");
+          li.textContent = pr.trim();
+          modalPRList.appendChild(li);
+        });
+      } else {
         const li = document.createElement("li");
-        li.textContent = fact.trim();
-        featuredFactsList.appendChild(li);
-      });
+        li.textContent = "—";
+        modalPRList.appendChild(li);
+      }
+    }
+
+    // Quick Facts
+    if (modalFactsList) {
+      modalFactsList.innerHTML = "";
+      if (facts.trim()) {
+        facts.split("|").forEach((fact) => {
+          const li = document.createElement("li");
+          li.textContent = fact.trim();
+          modalFactsList.appendChild(li);
+        });
+      } else {
+        const li = document.createElement("li");
+        li.textContent = "—";
+        modalFactsList.appendChild(li);
+      }
     }
   }
 
-  function setActiveCard(index) {
-    currentIndex = index; //sets global index to current index to change card 
-    cards.forEach((card, i) => { //iterates through every card in the array
-      card.classList.toggle("active", i === index); //if card is clicked the card with that specific index is "active"
-    });
+  function openModal(index) {
+    if (!cards.length) return;
+
+    currentIndex = index;
+    lastFocusedEl = document.activeElement;
+
+    populateModalFromCard(cards[currentIndex]);
+
+    // show
+    modal.classList.add("open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("modal-open");
+
+    // focus close button for accessibility
+    if (closeBtn) closeBtn.focus();
   }
 
-  //If there is a card, sets the active card index to the first element in array by default & uses the first card's data
-  // to populate the featured section so that there isn't a blank space
-  if (cards.length > 0) {
-    setActiveCard(0);
-    updateFeaturedFromCard(cards[0]);
+  function closeModal() {
+    modal.classList.remove("open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("modal-open");
+
+    // restore focus
+    if (lastFocusedEl && typeof lastFocusedEl.focus === "function") {
+      lastFocusedEl.focus();
+    }
   }
 
-  // A click listener for each card, allowing for the data of each card to transition per athlete
+  function goPrev() {
+    if (!cards.length) return;
+    currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+    populateModalFromCard(cards[currentIndex]);
+  }
 
+  function goNext() {
+    if (!cards.length) return;
+    currentIndex = (currentIndex + 1) % cards.length;
+    populateModalFromCard(cards[currentIndex]);
+  }
+
+  // Make cards keyboard accessible + open modal on click/Enter/Space
   cards.forEach((card, index) => {
-    card.addEventListener("click", () => {
-      updateFeaturedFromCard(card);
-      setActiveCard(index);
+    if (!card.hasAttribute("tabindex")) card.setAttribute("tabindex", "0");
+    card.setAttribute("role", "button");
+    card.setAttribute("aria-haspopup", "dialog");
 
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
+    card.addEventListener("click", () => openModal(index));
+
+    card.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        openModal(index);
+      }
     });
   });
 
-  //Buttons for smaller screen size to move the roster back and forth
-  if (prevBtn && nextBtn) {
-    prevBtn.addEventListener("click", () => {
-      if (!cards.length) return;
-      const newIndex = (currentIndex - 1 + cards.length) % cards.length;
-      setActiveCard(newIndex);
-    });
+  // Close interactions
+  if (closeBtn) closeBtn.addEventListener("click", closeModal);
+  if (overlay) overlay.addEventListener("click", closeModal);
 
-    nextBtn.addEventListener("click", () => {
-      if (!cards.length) return;
-      const newIndex = (currentIndex + 1) % cards.length;
-      setActiveCard(newIndex);
-    });
-  }
+  // Prev/Next inside modal
+  if (prevBtn) prevBtn.addEventListener("click", goPrev);
+  if (nextBtn) nextBtn.addEventListener("click", goNext);
+
+  // Keyboard controls while modal open
+  document.addEventListener("keydown", (e) => {
+    const isOpen = modal.classList.contains("open");
+    if (!isOpen) return;
+
+    if (e.key === "Escape") {
+      e.preventDefault();
+      closeModal();
+    }
+
+    // Optional: arrow navigation
+    if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      goPrev();
+    }
+    if (e.key === "ArrowRight") {
+      e.preventDefault();
+      goNext();
+    }
+
+    // Basic focus trap
+    if (e.key === "Tab") {
+      const focusables = modal.querySelectorAll(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      );
+      if (!focusables.length) return;
+
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
+  });
 });
