@@ -453,6 +453,7 @@ h2{font-size: clamp(2rem, 3vw, 2.5rem); margin: 0; color: #dce6dd;}
     color: floralwhite;
     font-size: 1rem;
     font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 10px;
 }
  .control-btn.active{transform:translateY(1px);}
  .history-section:nth-of-type(2){padding:1.4rem 1.1rem;}
