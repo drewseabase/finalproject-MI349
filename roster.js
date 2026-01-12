@@ -201,4 +201,67 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   });
+// ----- Race Gallery Lightbox -----
+const galleryImgs = Array.from(document.querySelectorAll(".race-gallery img"));
+const lb = document.getElementById("gallery-lightbox");
+const lbImg = document.getElementById("lightbox-img");
+const lbCaption = document.getElementById("lightbox-caption");
+const lbOverlay = lb?.querySelector(".lightbox-overlay");
+const lbClose = lb?.querySelector(".lightbox-close");
+const lbPrev = lb?.querySelector(".lightbox-prev");
+const lbNext = lb?.querySelector(".lightbox-next");
+
+let galleryIndex = 0;
+
+function openLightbox(index){
+  if(!lb || !lbImg) return;
+  galleryIndex = index;
+
+  const img = galleryImgs[galleryIndex];
+  lbImg.src = img.src;
+  lbImg.alt = img.alt || "Race photo";
+  if(lbCaption) lbCaption.textContent = img.alt || "";
+
+  lb.classList.add("open");
+  lb.setAttribute("aria-hidden","false");
+  document.body.classList.add("modal-open"); // reuse your existing body lock
+}
+
+function closeLightbox(){
+  if(!lb) return;
+  lb.classList.remove("open");
+  lb.setAttribute("aria-hidden","true");
+  document.body.classList.remove("modal-open");
+  if(lbImg){ lbImg.src = ""; lbImg.alt = ""; }
+  if(lbCaption) lbCaption.textContent = "";
+}
+
+function showGalleryPrev(){
+  if(!galleryImgs.length) return;
+  galleryIndex = (galleryIndex - 1 + galleryImgs.length) % galleryImgs.length;
+  openLightbox(galleryIndex);
+}
+
+function showGalleryNext(){
+  if(!galleryImgs.length) return;
+  galleryIndex = (galleryIndex + 1) % galleryImgs.length;
+  openLightbox(galleryIndex);
+}
+
+galleryImgs.forEach((img, i) => {
+  img.style.cursor = "zoom-in";
+  img.addEventListener("click", () => openLightbox(i));
+});
+
+lbOverlay?.addEventListener("click", closeLightbox);
+lbClose?.addEventListener("click", closeLightbox);
+lbPrev?.addEventListener("click", (e)=>{ e.stopPropagation(); showGalleryPrev(); });
+lbNext?.addEventListener("click", (e)=>{ e.stopPropagation(); showGalleryNext(); });
+
+document.addEventListener("keydown", (e) => {
+  if(!lb || !lb.classList.contains("open")) return;
+  if(e.key === "Escape") closeLightbox();
+  if(e.key === "ArrowLeft") showGalleryPrev();
+  if(e.key === "ArrowRight") showGalleryNext();
+});
 });
