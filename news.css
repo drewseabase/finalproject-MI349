@@ -260,6 +260,7 @@ li{margin-bottom: 5px;}
         margin-top: 10px;
         border: 0;
         font-family: 'Courier New', Courier, monospace;
+        margin-bottom: 10px;
     }
     .control-btn:active{transform: translateY(1px);}
 }
