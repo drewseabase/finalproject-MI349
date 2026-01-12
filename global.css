@@ -41,6 +41,18 @@ nav a:hover{
    padding: 5px;
    border-radius: 16px;
 }
+.sticky-nav{
+  position: fixed;
+  top: 0;
+  z-index: 2000;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  background: linear-gradient(to bottom, #1d5a47 0, #123f32 50%, #0a1d17 100%);
+  backdrop-filter: blur(8px);
+}
+.sticky-nav nav{width: 100%; position: relative;z-index: 2001;}
 .background-img{position: relative;}
 .background-img::before{
     content:"";
