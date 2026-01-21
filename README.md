@@ -1,63 +1,16 @@
-# Spartans Cross Country
+# React + Vite
 
-A responsive, content-focused website created to showcase the Michigan State University Cross Country program, including team history, athlete rosters, meet information, and visual storytelling elements.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
+Currently, two official plugins are available:
 
-## Project Overview
-Spartans Cross Country is a frontend web project developed as a final project for a web design course and expanded through personal iteration. The goal of the project was to create a clean, intuitive, and visually engaging site that highlights a collegiate athletic program while remaining easy to navigate and maintain. 
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-The project emphasizes a clear information hierarchy, responsive layout, and a design that reflects the identity and tradition of Michigan State Cross Country.
+## React Compiler
 
-## Goals & Design Focus
-The primary goal of this project was to:
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-- Present the team's information in a clear and accessible format
-- Create a responsive layout works across desktop and mobile devices
-- Emphasize a visual storytelling through typography, layout, and imagery
-- Maintain readable, organized code that is suitable for future expansion
+## Expanding the ESLint configuration
 
-The design decisions prioritized usability, consistency, and clarity over unnecessary complexity.
-
-## Key Features
-- Responsive layout using modern CSS techniques
-- Athlete roster and team information sections
-- Meets and season-based content organization
-- Reusable layout patterns and component-style structure
-- Clean navigation designed for quick scanning and usability
-## Tech Stack
-
-- HTML5
-- CSS3 (Flexbox and Grid)
-- JavaScript (ES6+)
-- Git & GitHub for version control
-
-
-## Project Structure
-This project is organized to keep layout, styling, and behavior clearly separated. Styles are structured for readability and reuse, and JavaScript is written to support interactivity without tightly coupling logic to presentation.
-
-This structure makes the project easier to understand, debug, and extend.
-
-## What I Learned
-
-Throughout this project, I learned how to:
-
-- Translate content and requirements into a structured frontend layout
-- Design responsive interfaces that remain readable and usable at different screen sizes
-- Balance visual design decisions with maintainable code
-- Iterate on a project based on feedback and self-review
-- Explain technical decisions clearly to both technical and non-technical audiences
-
-## Future Improvement
-
-If I were to continue to develop this project, I would:
-
-- Refactor parts of the JavaScript into smaller, more reusable functions
-- Improve accessibilty through additional contrast and keyboard navigation testing
-- Explore integrating dynamic data for roster or meet updates
-- Optimize images and performance further for production use
-
-## Author
-Drew Seabase
-Frontend-focused student developer with an interest in clean UI, usability, and mission-driven web projects
-
-[@drewseabase](https://github.com/drewseabase)
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
