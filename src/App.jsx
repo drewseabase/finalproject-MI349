@@ -4,6 +4,7 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
+import Roster from "./pages/Roster";
 
 // Temporary placeholders (make these files later)
 const Placeholder = ({ title }) => (
@@ -24,8 +25,10 @@ export default function App() {
         {/* safety for old static entry */}
         <Route path="/index.html" element={<Navigate to="/" replace />} />
 
-        {/* temporary so nav doesn't break */}
-        <Route path="/roster" element={<Placeholder title="Roster" />} />
+        {/* REAL roster page */}
+        <Route path="/roster" element={<Roster />} />
+
+        {/* still placeholders */}
         <Route path="/schedule" element={<Placeholder title="Schedule" />} />
         <Route path="/news" element={<Placeholder title="News" />} />
         <Route path="/history" element={<Placeholder title="History" />} />
@@ -38,4 +41,5 @@ export default function App() {
     </>
   );
 }
+
 
