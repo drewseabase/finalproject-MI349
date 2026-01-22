@@ -59,3 +59,45 @@ nav a:hover{
     background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0, #1d5442 100%), 
     url("/public/Images/background.jpg")
 }
+
+@media(max-width: 900px){
+    nav ul{
+        width: 100%;
+        max-width: 100%;
+        gap: 1.5rem;
+        padding: 20px;
+        margin-top: 20px;
+    }
+    nav a{
+        font-size: 1rem;
+    }
+    background-img::before{
+        min-height: 65vh;
+        background-position: center top;
+    }
+}
+@media(max-width: 600px){
+    nav ul{
+        width: 100%;
+        max-width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 0.75rem 0.75rem 1rem;
+    }
+    nav a{
+        font-size: 0.9rem;
+        padding: 4px 8px;
+    }
+    .background-img::before{
+        min-height: 55vh;
+        background-size: cover;
+        background-position: center;
+    }
+}
+@media(max-width: 400px){
+    nav a{
+        font-size: 0.82rem;
+        padding: 3px 6px;
+    }
+}

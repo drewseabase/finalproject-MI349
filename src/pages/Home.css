@@ -12,8 +12,8 @@ main{padding: 18rem 0 0 0;}
     grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
     grid-template-rows: auto auto;
     grid-template-areas: 
-    "left title"
-    ". img";
+    "title title"
+    "img left";
     column-gap: clamp(1rem, 1vw, 3rem);
     row-gap: 10px;
 
@@ -35,21 +35,24 @@ main{padding: 18rem 0 0 0;}
     line-height: 1.6;
     margin-top: clamp(2rem, 6vh, 4rem);
     margin-left: clamp(2rem, 7vw, 5rem);
-    transform: translateY(11rem);
+    transform: translateY(3rem);
 }
 .hero-text{
     grid-area: title;
     position: relative;
     z-index: 1;
     text-align: center;
+    margin-bottom: 3rem;
 }
 .hero-text h1{ /* Title*/
-    margin: 0 0 0.1rem;
-    font-size: clamp(1.8rem, 4vw, 3rem);
+    margin: 0;
+    margin-bottom: 40px;
+    font-size: clamp(2.6rem, 5vw, 4rem);
     color: #fafafa;
     font-weight: 800;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
+    text-align: center;
     text-shadow: 0 10px 30px rgba(0,0,0,0.6);
 }
 .hero-text h1, h2 {font-family: 'Oswald', sans-serif;}
@@ -487,7 +490,8 @@ p{
     .hero-text h1{
         text-align: center;
         width: min(90vw, 32rem);
-        font-size: 2.3rem;
+        font-size: clamp(2.2rem, 8vw, 3rem);
+        letter-spacing: 0.06em;
     }
     .container .right img{
         margin-top: 0;
