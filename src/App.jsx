@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
 import Roster from "./pages/Roster";
+import Schedule from "./pages/Schedule";
 
 // Temporary placeholders (make these files later)
 const Placeholder = ({ title }) => (
@@ -27,7 +28,7 @@ export default function App() {
 
         {/* REAL roster page */}
         <Route path="/roster" element={<Roster />} />
-
+        <Route path="/schedule" element={<Schedule/>} /> 
         {/* still placeholders */}
         <Route path="/schedule" element={<Placeholder title="Schedule" />} />
         <Route path="/news" element={<Placeholder title="News" />} />
