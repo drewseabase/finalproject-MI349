@@ -11,19 +11,19 @@ export default function Roster(){
     const [modalIndex, setModalIndex] = useState(null);
 
     const gallery = [
-        "/public/RaceGallery/IMG_7049.JPG",
-        "/public/RaceGallery/IMG_7050.JPG",
-        "/public/RaceGallery/IMG_7051.JPG",
-        "/public/RaceGallery/IMG_7052.JPG",
-        "/public/RaceGallery/IMG_7053.JPG",
-        "/public/RaceGallery/IMG_7054.JPG",
-        "/public/RaceGallery/IMG_7055.JPG",
-        "/public/RaceGallery/IMG_7056.JPG",
-        "/public/RaceGallery/IMG_7057.JPG",
-        "/public/RaceGallery/IMG_7058.JPG",
-        "/public/RaceGallery/IMG_7059.JPG",
-        "/public/RaceGallery/IMG_7060.JPG",
-        "/public/RaceGallery/IMG_7061.JPG",
+        "/RaceGallery/IMG_7049.JPG",
+        "/RaceGallery/IMG_7050.JPG",
+        "/RaceGallery/IMG_7051.JPG",
+        "/RaceGallery/IMG_7052.JPG",
+        "/RaceGallery/IMG_7053.JPG",
+        "/RaceGallery/IMG_7054.JPG",
+        "/RaceGallery/IMG_7055.JPG",
+        "/RaceGallery/IMG_7056.JPG",
+        "/RaceGallery/IMG_7057.JPG",
+        "/RaceGallery/IMG_7058.JPG",
+        "/RaceGallery/IMG_7059.JPG",
+        "/RaceGallery/IMG_7060.JPG",
+        "/RaceGallery/IMG_7061.JPG",
     ];
 
     const [lightboxIndex, setLightboxIndex] = useState(null);
@@ -101,17 +101,7 @@ export default function Roster(){
             <section className="race-gallery-section">
                 <h2 className="section-title">Race Day Gallery</h2>
                 <p className="gallery-intro">Moments on the course - from the starting line to the final straight.</p>
-
-                <div className="race-gallery">
-                    {gallery.map((src, i)=>(
-                        <img
-                        key={src}
-                        src={src}
-                        alt={`Race photo ${i + 1}`}
-                        style={{cursor: "zoom-in"}}
-                        onClick={() => setLightboxIndex(i)}/>
-                    ))}
-                </div>
+                <Lightbox images={gallery}/>
             </section>
 
             {/*Modal*/}

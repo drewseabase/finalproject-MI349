@@ -1,8 +1,13 @@
-import {useEffect,useMemo, useState} from "react";
+import {useEffect, useMemo, useState} from "react";
 import "./Lightbox.css";
 
 export default function Lightbox({images = []}){
-    const safeImages = useMemo(() => images.filter(Boolean),[images]);
+    const safeImages = useMemo(() => 
+        images.filter(Boolean).map(img => 
+            typeof img === 'string' ? { src: img, alt: '' } : img
+        ), 
+        [images]
+    );
 
     const [isOpen, setIsOpen] = useState(false);
     const [index, setIndex] = useState(0);
@@ -26,7 +31,7 @@ export default function Lightbox({images = []}){
     }
     function next(){
         if(!safeImages.length) return;
-        setIndex((prevIndex) => (prevIndex - 1) % safeImages.length);
+        setIndex((prevIndex) => (prevIndex + 1) % safeImages.length);
     }
 
     useEffect(()=> {
