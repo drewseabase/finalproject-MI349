@@ -18,7 +18,7 @@ export default function ScheduleTable({meets}){
                     {meets.map((m) =>(
                         <tr key={m.id}>
                             <td>
-                                <span className="date">{m.table.data}</span>
+                                <span className="date">{m.table.date}</span>
                             </td>
                             <td>{m.table.meet}</td>
                             <td>{m.table.location}</td>
