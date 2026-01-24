@@ -7,7 +7,7 @@ import Home from "./pages/Home";
 import Roster from "./pages/Roster";
 import Schedule from "./pages/Schedule";
 import News from "./pages/News";
-
+import History from "./pages/History";
 // Temporary placeholders (make these files later)
 const Placeholder = ({ title }) => (
   <main style={{ padding: "14rem 2rem 4rem" }}>
@@ -31,8 +31,7 @@ export default function App() {
         <Route path="/roster" element={<Roster />} />
         <Route path="/schedule" element={<Schedule/>} />
         <Route path="/news" element={<News/>} /> 
-        {/* still placeholders */}
-        <Route path="/history" element={<Placeholder title="History" />} />
+        <Route path="/history" element={<History />} />
 
         {/* catch-all */}
         <Route path="*" element={<Navigate to="/" replace />} />
