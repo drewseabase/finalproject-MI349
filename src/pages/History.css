@@ -20,7 +20,7 @@ body{
   margin: 0;
   font-family: 'Inter', sans-serif;
 }
-.history-page{max-width: 1200px; margin: 0 auto; padding: 5rem 1.5rem 4rem;}
+.history-page{max-width: 1200px; margin: 0 auto; padding: 15rem 1.5rem 4rem;}
 .history-title{text-align: center; position: relative; z-index: 1; color: #dce6dd;}
 .history-title h1{
     font-family: 'Oswald', sans-serif;
