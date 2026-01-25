@@ -1,0 +1,122 @@
+.athlete-modal{
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+}
+.athlete-modal.open{display: block;}
+.athlete-overlay{
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.72);
+  backdrop-filter: blur(6px);
+}
+.athlete-dialog{
+  position: relative;
+  width: min(980px, calc(100% - 2rem));
+  margin: 4vh auto;
+  border-radius: 28px;
+  z-index: 1;
+  max-height: 92vh;
+  display: flex;
+  overflow: hidden;
+}
+.athlete-close{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  z-index: 10;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(4,13,9,0.85);
+  color: #e4f0e8;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.athlete-modal-nav{
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+  gap: 12px;
+  z-index: 2;
+}
+.modal-nav-btn{
+  width: 35px;
+  height: 30px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(4,13,9,0.85);
+  color: #e4f0e8;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+.modal-profile{
+  margin: 0;
+}
+.athlete-dialog .roster-profile{
+  margin: 0;
+  width: 100%;
+  max-height: 92vh;
+  overflow: auto;
+  padding: 2.25rem 2.5rem 2rem;
+}
+.athlete-dialog .profile-photo{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.athlete-dialog .profile-photo img{
+  width: 100%;
+  max-width: 420px;
+  height: 360px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width:900px){
+  .athlete-dialog{margin:3vh auto;width:min(980px,calc(100% - 1.25rem));max-height:94vh;display:flex;justify-content:center;}
+  .athlete-dialog .roster-profile{border-radius:26px;max-height:94vh;overflow:auto;padding:2.6rem 1.6rem 1.2rem;}
+  .athlete-close{top:20px;right:20px;width:32px;height:32px;font-size:.95rem;display:grid;place-items:center;z-index:10;}
+  .athlete-dialog .profile-photo img{height:250px;object-position:50% 20%;} /* taller + show more forehead */
+  .athlete-modal-nav{display: none;}
+  .athlete-dialog .profile-info h2{margin:0 0 .2rem 0;}
+  .athlete-dialog .profile-meta{margin:0 0 .5rem 0;}
+  .athlete-dialog .profile-bio{margin:0 0 .75rem 0;line-height:1.5;}
+}
+@media (max-width:600px){
+  .athlete-dialog{margin:2.5vh auto;max-height:96vh;display:flex;justify-content:center;}
+  .athlete-dialog .roster-profile{max-height:96vh;overflow:auto;padding:2.4rem 1.1rem 1rem;}
+  .athlete-close{top:12px;right:12px;width:28px;height:28px;font-size:.9rem;display:grid;place-items:center;z-index:10;}
+  .athlete-dialog .profile-photo img{height:235px;object-position:50% 18%;} /* taller + shift image down */
+  .athlete-modal-nav{margin-top:6px;gap:10px;}
+  .athlete-dialog .profile-info h2{margin:0 0 .15rem 0;}
+  .athlete-dialog .profile-meta{margin:0 0 .45rem 0;}
+  .athlete-dialog .profile-bio{margin:0 0 .65rem 0;line-height:1.45;}
+}
+
+@media (max-width:550px){
+  .athlete-dialog{max-height:96vh;display:flex;justify-content:center;}
+  .athlete-dialog .roster-profile{max-height:96vh;overflow:auto;padding:2.25rem 1rem .9rem;}
+  .athlete-dialog .profile-photo img{height:220px;object-position:50% 18%;} /* taller + shift down */
+  .athlete-modal-nav{margin-top:6px;gap:10px;}
+  .athlete-dialog .profile-info h2{margin:0 0 .15rem 0;}
+  .athlete-dialog .profile-meta{margin:0 0 .4rem 0;}
+  .athlete-dialog .profile-bio{margin:0 0 .6rem 0;line-height:1.42;}
+}
+
+@media (max-width:400px){
+  .athlete-dialog{max-height:97vh;display:flex;justify-content:center;}
+  .athlete-dialog .roster-profile{max-height:97vh;overflow:auto;padding:2.15rem .9rem .85rem;}
+  .athlete-dialog .profile-photo img{height:210px;object-position:50% 16%;} /* taller + shift down */
+  .athlete-modal-nav{margin-top:6px;gap:10px;}
+  .athlete-dialog .profile-info h2{margin:0 0 .1rem 0;}
+  .athlete-dialog .profile-meta{margin:0 0 .35rem 0;}
+  .athlete-dialog .profile-bio{margin:0 0 .55rem 0;line-height:1.4;}
+}

@@ -1,0 +1,42 @@
+{
+  "hash": "0bb6b15b",
+  "configHash": "184303ec",
+  "lockfileHash": "164a56b3",
+  "browserHash": "6736ccea",
+  "optimized": {
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "7dbec907",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.mjs",
+      "file": "react-router-dom.js",
+      "fileHash": "87cf2457",
+      "needsInterop": false
+    },
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "fd035e56",
+      "needsInterop": true
+    },
+    "react/jsx-dev-runtime": {
+      "src": "../../node_modules/react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "50ac1668",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "react-DOLv65KA": {
+      "file": "react-DOLv65KA.js",
+      "isDynamicEntry": false
+    },
+    "react-dom-BMSBT411": {
+      "file": "react-dom-BMSBT411.js",
+      "isDynamicEntry": false
+    }
+  }
+}
