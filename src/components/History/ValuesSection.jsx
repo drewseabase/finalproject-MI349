@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import ValueCard from "./ValueCard";
-import MobileSliderControls from "./MobileSliderControls";
+import MobileSliderControls from "./MobileSliderControl";
 
 export default function ValuesSection({ values }) {
   const [currentIndex, setCurrentIndex] = useState(0);

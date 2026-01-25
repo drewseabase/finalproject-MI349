@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import ChampCard from "./ChampCard";
-import MobileSliderControls from "./MobileSliderControls";
+import MobileSliderControls from "./MobileSliderControl";
 
 export default function ChampionshipSection({ championships }) {
   const [currentIndex, setCurrentIndex] = useState(0);
