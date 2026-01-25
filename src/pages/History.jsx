@@ -4,12 +4,12 @@ import { historyChampionships } from "../data/historyChampionships";
 import { historyValues } from "../data/historyValues";
 import { historyTrainingSpots } from "../data/historyTrainingSpots";
 import { historyCulture } from "../data/historyCulture";
-import HistoryHero from "../components/history/HistoryHero";
-import HistoryTimeline from "../components/history/HistoryTimeline";
-import ChampionshipSection from "../components/history/ChampionshipSection";
-import CultureSection from "../components/history/CultureSection";
-import TrainingSpotsSection from "../components/history/TrainingSpotsSection";
-import ValuesSection from "../components/history/ValuesSection";
+import HistoryHero from "../components/History/HistoryHero";
+import HistoryTimeline from "../components/History/HistoryTimeline";
+import ChampionshipSection from "../components/History/ChampionshipSection";
+import CultureSection from "../components/History/CultureSection";
+import TrainingSpotsSection from "../components/History/TrainingSpotsSection";
+import ValuesSection from "../components/History/ValuesSection";
 import "./History.css";
 
 export default function History() {
